@@ -1,6 +1,6 @@
 # CLAUDE.md — Claude Code Guidelines
 
-> Guidance for Claude Code (claude.ai/code) when working in **devops-guide** (published at https://devops.phrandrade.com).
+> Guidance for Claude Code (claude.ai/code) when working in **devops-guide** (published at https://octa.phrandrade.com).
 
 ---
 

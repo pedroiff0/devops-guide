@@ -1,11 +1,13 @@
 ---
-title: "Guia GitHub & Hub de Documentações Reexplicadas | Second Brain"
+title: "O.C.T.A. — Omni Clarified Technical Atlas"
+author: "Pedro Andrade & Everton"
+publish: true
 description: "Um ecossistema aberto de documentações reexplicadas com profundidade, clareza e conexões em grafo — cobrindo GitHub, Docker, Cloudflare, Claude, Hermes, Lovable e mais."
 order: 1
 ---
 
-# 🧠 Segundo Cérebro: Hub de Documentações Reexplicadas
-> **Welcome / Bem-vindo!** Este é um repositório e jardim digital público focado em transformar documentações técnicas fragmentadas em guias completos, reexplicados com profundidade prática, arquitetura e conexões em grafo interativo.
+# 🏛️ O.C.T.A. — Omni Clarified Technical Atlas
+> **Welcome / Bem-vindo!** O **O.C.T.A.** é um atlas e jardim digital público focado em transformar documentações técnicas fragmentadas em guias completos, reexplicados de dev pra dev com profundidade prática, arquitetura e conexões em grafo interativo.
 
 ---
 

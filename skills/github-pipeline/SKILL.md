@@ -117,7 +117,7 @@ gh pr merge <pr-id> --squash --delete-branch
 ```
 - A branch é deletada.
 - A Issue vinculada em `Development` é encerrada automaticamente.
-- O site é compilado e publicado no GitHub Pages (`devops.phrandrade.com`).
+- O site é compilado e publicado no GitHub Pages (`octa.phrandrade.com`).
 
 ---
 
@@ -138,7 +138,7 @@ Sempre que um **novo módulo ou conjunto substancial de conteúdo** for integrad
    gh discussion create \
      --category "Announcements" \
      --title "🚀 Novo Módulo Disponível: <Nome do Módulo>" \
-     --body "O novo módulo **<Nome do Módulo>** foi publicado em [devops.phrandrade.com](https://devops.phrandrade.com)..."
+     --body "O novo módulo **<Nome do Módulo>** foi publicado em [octa.phrandrade.com](https://octa.phrandrade.com)..."
    ```
 
 ---

@@ -1,7 +1,7 @@
-# 🤖 AGENTS.md — Master Guidelines for AI Pair Programmers
+# 🏛️ O.C.T.A. — AGENTS.md: Master Guidelines for AI Pair Programmers
 
 > **Welcome AI Agents (Antigravity, Claude Code, Hermes, Cursor, Copilot & contributors)!**
-> This repository is a large-scale, bilingual (PT-BR / EN-US) **Second Brain & Re-explained Documentation Hub** published via Quartz v4 to **[devops.phrandrade.com](https://devops.phrandrade.com)**.
+> This repository is **O.C.T.A. (Omni Clarified Technical Atlas)**, a large-scale, bilingual (PT-BR / EN-US) **Digital Garden & Re-explained Documentation Hub** published via Quartz v4 to **[octa.phrandrade.com](https://octa.phrandrade.com)**.
 > Maintained by **Pedro Henrique Rocha de Andrade** ([@pedroiff0](https://github.com/pedroiff0)) and **Everton** ([@evertonpje](https://github.com/evertonpje)).
 
 ---
@@ -13,7 +13,7 @@ devops-guide/
 ├── .claude/                     # Claude Code agent configuration & guidelines
 ├── .github/                     # GitHub Actions CI/CD, issue & PR templates
 │   ├── workflows/
-│   │   ├── deploy-gh-pages.yaml # Continuous deploy to devops.phrandrade.com
+│   │   ├── deploy-gh-pages.yaml # Continuous deploy to octa.phrandrade.com
 │   │   ├── ci.yml               # Automated build and commit linting
 │   │   └── commit-verify.yml    # Branch commit validator
 │   ├── ISSUE_TEMPLATE/          # Standardized issue templates
@@ -108,7 +108,7 @@ graph LR
     Commit --> PR["6. Open Pull Request"]
     PR --> Review["7. Technical Code Review"]
     Review --> Merge["8. Squash & Merge + Delete Branch"]
-    Merge --> Deploy["9. Auto-Deploy to devops.phrandrade.com"]
+    Merge --> Deploy["9. Auto-Deploy to octa.phrandrade.com"]
 ```
 
 1. **Register Full Issue**: Create an issue using `gh issue create` filling **Assignee**, **Labels**, **Milestone** (e.g. `v1.1.0`), and **Project**.
@@ -123,4 +123,4 @@ graph LR
 5. **Commit**: `git commit -m "feat(module): description"`.
 6. **Open PR**: `gh pr create` with filled template and `Closes #<issue-number>`.
 7. **Code Review & Squash Merge**: Review changes and execute `gh pr merge --squash --delete-branch`.
-8. **Verify Continuous Deploy**: Confirm GitHub Actions deploys the updated vault to `devops.phrandrade.com`.
+8. **Verify Continuous Deploy**: Confirm GitHub Actions deploys the updated vault to `octa.phrandrade.com`.

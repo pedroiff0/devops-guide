@@ -1,6 +1,6 @@
 {
-  "name": "devops-guide",
-  "description": "🧠 Segundo Cérebro de Documentações Reexplicadas & Hub de Conhecimento DevOps (GitHub, Docker, Cloudflare, Lovable, Claude, Hermes, OceanGate)",
+  "name": "octa",
+  "description": "🏛️ O.C.T.A. — Omni Clarified Technical Atlas (GitHub, Docker, Cloudflare, Lovable, Claude, Hermes, OceanGate, Kubernetes)",
   "private": true,
   "version": "1.0.0",
   "type": "module",
@@ -10,7 +10,7 @@
     "Everton (https://github.com/evertonpje)"
   ],
   "license": "MIT",
-  "homepage": "https://devops.phrandrade.com",
+  "homepage": "https://octa.phrandrade.com",
   "repository": {
     "type": "git",
     "url": "https://github.com/pedroiff0/devops-guide.git"

@@ -52,7 +52,7 @@ graph TD
 
 ## 📚 Documentação Original & Fontes de Referência
 
-- 🌊 [OceanGate API Gateway Architecture](https://devops.phrandrade.com) — Especificação de roteamento de borda e rate limiting.
+- 🌊 [OceanGate API Gateway Architecture](https://octa.phrandrade.com) — Especificação de roteamento de borda e rate limiting.
 - ⚡ [Redis Documentation](https://redis.io/docs/) — Algoritmos de controle de vazão e estruturas de dados em memória.
 
 ---

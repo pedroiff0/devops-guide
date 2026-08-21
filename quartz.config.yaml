@@ -1,13 +1,13 @@
 # yaml-language-server: $schema=./quartz/plugins/quartz-plugins.schema.json
 configuration:
-  pageTitle: "Guia GitHub & Docs Hub"
-  pageTitleSuffix: " | Guia GitHub & Second Brain"
+  pageTitle: "OCTA"
+  pageTitleSuffix: " | O.C.T.A. — Omni Clarified Technical Atlas"
   enableSPA: true
   enablePopovers: true
   analytics:
     provider: plausible
   locale: pt-BR
-  baseUrl: devops.phrandrade.com
+  baseUrl: octa.phrandrade.com
   ignorePatterns:
     - private
     - templates

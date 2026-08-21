@@ -50,7 +50,7 @@ graph TD
 
 ## 📚 Official Documentation & References
 
-- 🌊 [OceanGate API Gateway Architecture](https://devops.phrandrade.com) — Edge routing and rate limiting specifications.
+- 🌊 [OceanGate API Gateway Architecture](https://octa.phrandrade.com) — Edge routing and rate limiting specifications.
 - ⚡ [Redis Documentation](https://redis.io/docs/) — Distributed throttling algorithms and in-memory caching.
 
 ---

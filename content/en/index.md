@@ -1,5 +1,5 @@
 ---
-title: "Second Brain: Re-explained Docs Hub"
+title: "O.C.T.A. — Central Atlas EN"
 author: "Pedro Andrade & Everton"
 publish: true
 description: "Central knowledge base and interactive graph of re-explained technical documentation with clarity, production-ready commands, and modern architecture."
@@ -11,10 +11,10 @@ tags:
   - documentation
 ---
 
-# 🧠 Central Hub of Re-explained Docs
+# 🏛️ O.C.T.A. — Omni Clarified Technical Atlas
 
 > [!NOTE]
-> **Project Vision**: Official documentation is often dry, fragmented, or purely descriptive. The goal of this **Second Brain** is to re-explain technical tools and ecosystems through practical software engineering: with conceptual architecture diagrams, production-ready commands, common pitfalls, and navigable bidirectional graph connections.
+> **Project Vision**: Official documentation is often dry, fragmented, or purely descriptive. **O.C.T.A.** aims to re-explain technical tools and ecosystems through practical software engineering: with conceptual architecture diagrams, production-ready commands, common pitfalls, and navigable bidirectional graph connections.
 
 ---
 

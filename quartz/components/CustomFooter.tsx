@@ -6,7 +6,7 @@ const CustomFooter: QuartzComponent = ({ displayClass, fileData }: QuartzCompone
   const isEn = fileData.slug?.startsWith("en") ?? false
 
   const content = {
-    title: isEn ? "DevOps Guide & Second Brain" : "DevOps Guide & Segundo Cérebro",
+    title: isEn ? "O.C.T.A. — Omni Clarified Technical Atlas" : "O.C.T.A. — Omni Clarified Technical Atlas",
     maintainedBy: isEn ? "Curated & Built by" : "Idealizado & Mantido por",
     and: isEn ? "and" : "e",
     license: isEn ? "Free & Open Source under MIT License" : "Código Aberto Gratuito sob Licença MIT",
@@ -25,7 +25,7 @@ const CustomFooter: QuartzComponent = ({ displayClass, fileData }: QuartzCompone
     >
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", gap: "1.25rem", marginBottom: "1rem", flexWrap: "wrap" }}>
         <a
-          href="https://devops.phrandrade.com"
+          href="https://octa.phrandrade.com"
           target="_blank"
           rel="noopener noreferrer"
           title="Digital Garden Live"
@@ -36,7 +36,7 @@ const CustomFooter: QuartzComponent = ({ displayClass, fileData }: QuartzCompone
             <line x1="2" y1="12" x2="22" y2="12"></line>
             <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
           </svg>
-          devops.phrandrade.com
+          octa.phrandrade.com
         </a>
 
         <span style={{ opacity: 0.4 }}>•</span>

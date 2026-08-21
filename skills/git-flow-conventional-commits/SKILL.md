@@ -186,4 +186,4 @@ gh pr merge <pr-number> --squash --delete-branch
 - **Efeito Automático**:
   1. A branch de trabalho é excluída local e remotamente.
   2. A Issue vinculada no campo `Development` e no corpo (`Closes #id`) é **fechada automaticamente**.
-  3. O workflow `Deploy to GitHub Pages` é disparado na branch `main`, publicando a atualização em **[devops.phrandrade.com](https://devops.phrandrade.com)**.
+  3. O workflow `Deploy to GitHub Pages` é disparado na branch `main`, publicando a atualização em **[octa.phrandrade.com](https://octa.phrandrade.com)**.

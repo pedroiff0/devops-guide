@@ -1,24 +1,24 @@
-# 🧠 Guia DevOps & Hub de Documentações Reexplicadas
-### *The Ultimate DevOps Second Brain & Re-explained Documentation Hub*
+# 🏛️ O.C.T.A. — Omni Clarified Technical Atlas
+### *The Ultimate Engineering, DevOps Second Brain & Re-explained Documentation Hub*
 
 <p align="center">
   <a href="https://github.com/pedroiff0/devops-guide/blob/main/LICENSE"><img src="https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge" alt="License: MIT"></a>
   <a href="https://quartz.jzhao.xyz/"><img src="https://img.shields.io/badge/Engine-Quartz%20v4-black?style=for-the-badge&logo=quartz" alt="Quartz v4"></a>
   <a href="https://nodejs.org/"><img src="https://img.shields.io/badge/Node.js-%3E%3D22-339933?style=for-the-badge&logo=node.js&logoColor=white" alt="Node.js 22+"></a>
-  <a href="https://devops.phrandrade.com"><img src="https://img.shields.io/badge/Domain-devops.phrandrade.com-blueviolet?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Custom Domain"></a>
+  <a href="https://octa.phrandrade.com"><img src="https://img.shields.io/badge/Domain-octa.phrandrade.com-blueviolet?style=for-the-badge&logo=cloudflare&logoColor=white" alt="Custom Domain"></a>
   <a href="https://www.conventionalcommits.org/"><img src="https://img.shields.io/badge/Commits-Conventional%201.0.0-FE5196?style=for-the-badge&logo=git" alt="Conventional Commits"></a>
   <img src="https://img.shields.io/badge/Languages-PT--BR%20%7C%20EN--US-informational?style=for-the-badge" alt="Bilingual">
 </p>
 
 <p align="center">
-  <strong>🌐 <a href="https://devops.phrandrade.com">Acesse a Documentação Online / Access Live Digital Garden: devops.phrandrade.com</a></strong>
+  <strong>🌐 <a href="https://octa.phrandrade.com">Acesse a Plataforma Online / Access Live Digital Garden: octa.phrandrade.com</a></strong>
 </p>
 
 ---
 
 ## 🌟 Sobre o Projeto / About The Project
 
-Documentações técnicas oficiais costumam ser densas, dispersas ou puramente descritivas. O **Guia DevOps & Hub de Documentações Reexplicadas** é um **Segundo Cérebro aberto (Digital Garden)** concebido para ser o "guia de todos os outros guias": estruturado em tópicos, subtópicos e subsubtópicos aprofundados, ricamente exemplificados com casos reais de engenharia, referências cruzadas no grafo, links externos e suporte bilíngue nativo.
+Documentações técnicas oficiais costumam ser densas, dispersas ou puramente descritivas. O **O.C.T.A. (Omni Clarified Technical Atlas)** é um **Segundo Cérebro aberto (Digital Garden)** concebido para ser o "atlas unificado de todos os outros guias": estruturado em tópicos, subtópicos e subsubtópicos aprofundados, ricamente exemplificados com casos reais de engenharia, referências cruzadas no grafo, links externos e suporte bilíngue nativo.
 
 ### 🎯 Principais Destaques:
 - 🇧🇷 / 🇺🇸 **100% Bilíngue**: Navegação completa espelhada em **Português (PT-BR)** e **Inglês (EN-US)** com alternância instantânea de idioma sem quebra de rota.
@@ -33,7 +33,7 @@ Documentações técnicas oficiais costumam ser densas, dispersas ou puramente d
 
 ```mermaid
 graph TD
-    Hub["🧠 DevOps Docs Hub (devops.phrandrade.com)"]
+    Hub["🏛️ O.C.T.A. Atlas (octa.phrandrade.com)"]
     Hub --> GitHub["🐙 GitHub & Git Guide (Completo)"]
     Hub --> Docker["🐳 Docker & Containers"]
     Hub --> Cloudflare["⚡ Cloudflare Ecosystem"]
@@ -91,7 +91,7 @@ Abra `http://localhost:8080` no navegador para explorar o jardim digital com rec
 ```bash
 npm run build
 ```
-Os arquivos estáticos otimizados serão gerados na pasta `public/`, incluindo o arquivo `CNAME` para `devops.phrandrade.com`.
+Os arquivos estáticos otimizados serão gerados na pasta `public/`, incluindo o arquivo `CNAME` para `octa.phrandrade.com`.
 
 ---
 
@@ -131,7 +131,7 @@ devops-guide/
 │   ├── validate-commit-msg.sh   # Validador local de Conventional Commits
 │   └── check-i18n-mirror.py     # Verificador de simetria de slugs bilíngue
 ├── static/
-│   └── CNAME                    # Apontamento para devops.phrandrade.com
+│   └── CNAME                    # Apontamento para octa.phrandrade.com
 ├── quartz.config.yaml           # Configuração de plugins, tema e grafo
 ├── package.json
 └── README.md

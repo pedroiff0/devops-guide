@@ -1,6 +1,6 @@
 # 🛠️ Repository Skills & Guidelines
 
-> Este diretório reúne as **Skills** oficiais do repositório **DevOps Guide & Hub de Documentações Reexplicadas** (hospedado em [devops.phrandrade.com](https://devops.phrandrade.com)). Elas funcionam tanto como guias de procedimentos passo a passo para desenvolvedores humanos quanto como manuais de instrução para agentes de inteligência artificial (Antigravity, Claude Code, Hermes, Cursor).
+> Este diretório reúne as **Skills** oficiais do repositório **DevOps Guide & Hub de Documentações Reexplicadas** (hospedado em [octa.phrandrade.com](https://octa.phrandrade.com)). Elas funcionam tanto como guias de procedimentos passo a passo para desenvolvedores humanos quanto como manuais de instrução para agentes de inteligência artificial (Antigravity, Claude Code, Hermes, Cursor).
 
 ---
 

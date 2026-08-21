@@ -1,5 +1,5 @@
 ---
-title: "Segundo Cérebro: Hub de Documentações Reexplicadas"
+title: "O.C.T.A. — Atlas Central PT-BR"
 author: "Pedro Andrade & Everton"
 publish: true
 description: "Base de conhecimento central e grafo interativo de documentações técnicas reexplicadas com clareza, comandos reais e arquitetura moderna."
@@ -11,10 +11,10 @@ tags:
   - documentacao
 ---
 
-# 🧠 Hub Central de Documentações Reexplicadas
+# 🏛️ O.C.T.A. — Omni Clarified Technical Atlas
 
 > [!NOTE]
-> **Visão do Projeto**: Documentações oficiais costumam ser densas, dispersas ou puramente descritivas. O objetivo deste **Segundo Cérebro** é reexplicar ferramentas e ecossistemas sob a ótica de engenharia prática: com diagramas conceituais, comandos prontos para produção, armadilhas comuns e conexões bidirecionais navegáveis.
+> **Visão do Projeto**: Documentações oficiais costumam ser densas, dispersas ou puramente descritivas. O **O.C.T.A.** tem como missão reexplicar ferramentas e ecossistemas sob a ótica de engenharia prática: com diagramas conceituais, comandos prontos para produção, armadilhas comuns e conexões bidirecionais navegáveis.
 
 ---
 
