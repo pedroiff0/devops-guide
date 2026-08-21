@@ -20,6 +20,12 @@ Toda nota em `content/**/*.md` **DEVE** iniciar com o seguinte cabeçalho YAML:
 ---
 title: "Título Conciso com Beautiful Icon (Ex: 🐳 Docker Engine)"
 author: "Pedro Andrade & Everton"
+authors: # Opcional: lista de múltiplos autores humanos e agentes IA
+  - "Pedro Andrade"
+  - "Everton"
+  - "Antigravity"
+  - "Claude"
+  - "Hermes"
 publish: true
 ai_assisted: true # Opcional: true se co-escrito com agentes de IA
 description: "Resumo executivo de alto valor em 1 a 2 frases para SEO e cards de compartilhamento."
@@ -32,7 +38,7 @@ tags:
 
 > [!NOTE]
 > - `publish: true`: Garante que a nota seja processada e indexada no grafo.
-> - `author`: Atribui o crédito formal de curadoria e autoria da nota.
+> - `author` / `authors`: Atribui o crédito formal aos curadores humanos e aos agentes de IA colaboradores.
 > - `ai_assisted: true`: Sinaliza que o conteúdo teve suporte de agentes de IA na curadoria e estruturação.
 > - **Segurança & Licença Livre**: **NUNCA** inclua senhas, credenciais, tokens privados ou dados sensíveis. Todo o código é aberto e livre sob a licença MIT.
 

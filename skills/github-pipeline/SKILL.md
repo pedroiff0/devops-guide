@@ -121,6 +121,49 @@ gh pr merge <pr-id> --squash --delete-branch
 
 ---
 
+### 7. 📢 Atualização Obrigatória do Ecossistema (README, Wiki & Discussions)
+
+Sempre que um **novo módulo ou conjunto substancial de conteúdo** for integrado:
+
+1. **Atualizar `README.md`**:
+   - Adicionar o novo módulo na tabela curricular de módulos disponíveis.
+   - Atualizar a contagem total de notas e links rápidos.
+2. **Atualizar a Wiki do GitHub**:
+   - Clonar a Wiki (`git clone https://github.com/pedroiff0/devops-guide.wiki.git /tmp/wiki`).
+   - Adicionar a nova página na Wiki e referenciá-la no `_Sidebar.md` e `Home.md`.
+   - Executar commit e push na Wiki.
+3. **Publicar Anúncio no GitHub Discussions**:
+   - Criar uma nova discussão na categoria **Announcements** ou **General**:
+   ```bash
+   gh discussion create \
+     --category "Announcements" \
+     --title "🚀 Novo Módulo Disponível: <Nome do Módulo>" \
+     --body "O novo módulo **<Nome do Módulo>** foi publicado em [devops.phrandrade.com](https://devops.phrandrade.com)..."
+   ```
+
+---
+
+## 🏷️ Suporte a Múltiplos Autores & Agentes de IA
+
+O campo de autoria no frontmatter aceita múltiplos autores e agentes colaboradores em formato de array ou string:
+
+```yaml
+---
+title: "Docker Compose em Produção"
+author: "Pedro Andrade & Everton" # Formato consolidado
+authors: # Ou lista individual com humanos e agentes de IA
+  - "Pedro Andrade"
+  - "Everton"
+  - "Claude"
+  - "Antigravity"
+  - "Hermes"
+publish: true
+ai_assisted: true
+---
+```
+
+---
+
 ## ⚡ Gestão de Concorrência & Paralelismo
 
 - **Limite de Subagentes**: Máximo de 3 subagentes paralelos trabalhando em módulos distintos (ex.: um em `cloudflare`, outro em `claude`, outro em `hermes`).

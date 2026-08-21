@@ -275,6 +275,9 @@ plugins:
     options:
       includeAll: false
       includedProperties:
+        - author
+        - authors
+        - ai_assisted
         - description
         - tags
         - aliases
