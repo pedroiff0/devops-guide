@@ -166,12 +166,30 @@ Consulte [`CONTRIBUTING.md`](./CONTRIBUTING.md) e [`CODE_OF_CONDUCT.md`](./CODE_
 
 ---
 
-## 👤 Autor / Author
+## 👥 Autores & Contribuidores / Authors & Contributors
 
-**Pedro Henrique Rocha de Andrade**
-- 🐙 GitHub: [@pedroiff0](https://github.com/pedroiff0)
-- 🌐 Website: [phrandrade.com](https://www.phrandrade.com)
-- ✉️ Email: pedroiff0@gmail.com
+<div align="center">
+  <table>
+    <tr>
+      <td align="center" width="50%">
+        <a href="https://github.com/pedroiff0">
+          <img src="https://github.com/pedroiff0.png?size=110" width="110px;" alt="Pedro Henrique Rocha de Andrade" style="border-radius:50%;"/><br />
+          <sub><b>Pedro Henrique Rocha de Andrade</b></sub>
+        </a><br />
+        <sub>🚀 Idealizador & Mantenedor Principal</sub><br />
+        <a href="https://phrandrade.com">🌐 phrandrade.com</a> · <a href="mailto:pedroiff0@gmail.com">✉️ Email</a>
+      </td>
+      <td align="center" width="50%">
+        <a href="https://github.com/evertonpje">
+          <img src="https://github.com/evertonpje.png?size=110" width="110px;" alt="Everton" style="border-radius:50%;"/><br />
+          <sub><b>Everton</b></sub>
+        </a><br />
+        <sub>💡 Contribuidor Principal & Co-Mantenedor</sub><br />
+        <a href="https://github.com/evertonpje">🐙 @evertonpje</a>
+      </td>
+    </tr>
+  </table>
+</div>
 
 ---
 

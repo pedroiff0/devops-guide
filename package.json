@@ -5,6 +5,10 @@
   "version": "1.0.0",
   "type": "module",
   "author": "Pedro Henrique Rocha de Andrade <pedroiff0@gmail.com>",
+  "contributors": [
+    "Pedro Henrique Rocha de Andrade <pedroiff0@gmail.com> (https://github.com/pedroiff0)",
+    "Everton (https://github.com/evertonpje)"
+  ],
   "license": "MIT",
   "homepage": "https://devops.phrandrade.com",
   "repository": {

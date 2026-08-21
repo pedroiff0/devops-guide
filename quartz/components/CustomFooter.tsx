@@ -7,9 +7,9 @@ const CustomFooter: QuartzComponent = ({ displayClass, fileData }: QuartzCompone
 
   const content = {
     title: isEn ? "DevOps Guide & Docs Hub" : "Guia DevOps & Docs Hub",
-    author: "Pedro H. R. de Andrade",
     builtWith: isEn ? "Built with" : "Construído com",
     and: isEn ? "and" : "e",
+    maintainedBy: isEn ? "Maintained by" : "Mantido por",
   }
 
   return (
@@ -23,9 +23,13 @@ const CustomFooter: QuartzComponent = ({ displayClass, fileData }: QuartzCompone
         <a href="https://devops.phrandrade.com" target="_blank">
           <strong>{content.title}</strong>
         </a>{" "}
-        ·{" "}
-        <a href="https://github.com/pedroiff0/devops-guide" target="_blank">
-          {content.author}
+        · {content.maintainedBy}{" "}
+        <a href="https://github.com/pedroiff0" target="_blank">
+          Pedro Andrade
+        </a>{" "}
+        {content.and}{" "}
+        <a href="https://github.com/evertonpje" target="_blank">
+          Everton
         </a>
       </p>
       <p style={{ margin: "0.4rem 0", fontSize: "0.85rem", opacity: 0.8 }}>
