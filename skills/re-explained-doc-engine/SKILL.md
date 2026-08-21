@@ -42,22 +42,25 @@ content/
 
 ---
 
-## 🚀 Roteiro de Implementação
+## 🚀 Roteiro de Implementação Passo a Passo
 
-1. **Crie a Estrutura de Pastas**:
+1. **Abra a Issue Completa & Vincule no Campo `Development`**:
+   - Siga [[../git-flow-conventional-commits/SKILL|Skill: Fluxo Ágil Completo]] para preencher Assignee, Labels, Milestone e vincular a branch de trabalho à Issue.
    ```bash
-   mkdir -p content/pt-br/<modulo> content/en/<modulo>
+   gh issue develop <issue-id> --name feat/<issue-id>-<slug> --checkout
    ```
-2. **Desenvolva o `index.md` do Módulo**:
-   - Forneça uma visão panorâmica com diagrama Mermaid.
-   - Liste os tópicos com ordem definida (`order: 1, 2, 3...`).
-3. **Escreva as Notas Especializadas**:
-   - Siga o guia em [[../doc-authoring/SKILL|Doc Authoring Skill]].
-4. **Espelhe em Inglês**:
-   - Garanta simetria 1:1 de slugs e links.
-5. **Atualize o Hub Central**:
-   - Adicione os novos links no [[pt-br/index|Hub Central PT-BR]] e no [[en/index|Central Hub EN]].
-6. **Compile e Valide o Grafo**:
+2. **Crie a Estrutura de Pastas e Notas Bilíngues**:
+   - Crie os arquivos simultaneamente em `content/pt-br/<modulo>/` e `content/en/<modulo>/`.
+   - Adicione `author: "Pedro Andrade & Everton"`, `title`, `order` e `tags` no frontmatter.
+3. **Desenvolva o `index.md` do Módulo**:
+   - Forneça uma visão panorâmica com diagrama conceitual Mermaid.
+   - Liste os tópicos com ordem definida (`order: 10, 20, 30...`).
+4. **Escreva as Notas Especializadas**:
+   - Siga as diretrizes de [[../re-explained-authoring/SKILL|Skill: Escrita de Guias Reexplicados]].
+5. **Execute a Validação Local**:
    ```bash
-   npx quartz build
+   python3 scripts/check-i18n-mirror.py
+   npm run build
    ```
+6. **Submeta o Pull Request**:
+   - Abra o PR vinculando à Issue (`Closes #<issue-id>`), execute o Code Review e realize o Squash & Merge.

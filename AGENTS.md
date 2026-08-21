@@ -92,7 +92,7 @@ When introducing new content or modules to the repository, agents and developers
 
 ```mermaid
 graph LR
-    Issue["1. Open Issue (Template)"] --> Branch["2. Create Work Branch"]
+    Issue["1. Open Issue (All Fields)"] --> Branch["2. Branch & Link in Development"]
     Branch --> Author["3. Write PT-BR & EN-US"]
     Author --> Validate["4. Validate (Build + Mirror)"]
     Validate --> Commit["5. Semantic Commit"]
@@ -102,9 +102,14 @@ graph LR
     Merge --> Deploy["9. Auto-Deploy to devops.phrandrade.com"]
 ```
 
-1. **Register Issue**: Create an issue using `gh issue create` with the documentation template.
-2. **Work Branch**: Create branch `feat/<issue-number>-short-description`.
-3. **Author Content**: Write technical guides adhering to `skills/re-explained-authoring/SKILL.md`.
+1. **Register Full Issue**: Create an issue using `gh issue create` filling **Assignee**, **Labels**, **Milestone** (e.g. `v1.1.0`), and **Project**.
+2. **Work Branch & Link in `Development`**:
+   - Create and link the branch directly to the issue:
+   ```bash
+   gh issue develop <issue-number> --name feat/<issue-number>-short-description --checkout
+   ```
+   - *Or in GitHub UI*: Open the issue, click on **Development** on the right sidebar, and link the branch.
+3. **Author Content**: Write in-depth technical guides adhering to `skills/re-explained-authoring/SKILL.md` (bilingual PT-BR and EN-US 1:1).
 4. **Audit Locally**: Execute `npm run build` and `python3 scripts/check-i18n-mirror.py`.
 5. **Commit**: `git commit -m "feat(module): description"`.
 6. **Open PR**: `gh pr create` with filled template and `Closes #<issue-number>`.
