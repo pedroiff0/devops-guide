@@ -1,0 +1,34 @@
+{
+  "name": "jc-dashboard",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Renders journal club activity statistics computed from the frontmatter of the club's own article notes",
+  "exports": {
+    ".": "./dist/index.js",
+    "./components": "./dist/components/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "quartz": {
+    "name": "jc-dashboard",
+    "displayName": "Journal Club Dashboard",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 27,
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "components": {
+      "JCDashboard": {
+        "displayName": "Journal Club Dashboard",
+        "defaultPosition": "afterBody",
+        "defaultPriority": 24
+      }
+    }
+  }
+}

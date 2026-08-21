@@ -1,0 +1,34 @@
+{
+  "name": "photo-carousel",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "Renders a media-carousel from every image found in a content/assets subfolder named by frontmatter.photoFolder",
+  "exports": {
+    ".": "./dist/index.js",
+    "./components": "./dist/components/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "quartz": {
+    "name": "photo-carousel",
+    "displayName": "Photo Carousel",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 26,
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "components": {
+      "PhotoCarousel": {
+        "displayName": "Photo Carousel",
+        "defaultPosition": "beforeBody",
+        "defaultPriority": 25
+      }
+    }
+  }
+}

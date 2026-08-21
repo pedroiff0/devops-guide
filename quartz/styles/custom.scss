@@ -1,0 +1,1059 @@
+@use "./variables.scss" as *;
+
+// Largura do corpo um pouco maior: colunas de conteúdo mais perto das bordas,
+// mantendo margem de segurança (~110px de cada lado em telas 1920px).
+// Base do fork: .page { max-width: calc(desktop + 300px) } = 1500px.
+.page {
+  max-width: 1850px;
+}
+
+// --- Mobile layout fixes ---
+
+// The site title ("Bem-Vindo! / Welcome!") was fighting the explorer toggle,
+// language buttons, search and dark-mode icons for space in the same row,
+// wrapping onto 3 lines and pushing all page content down. Give it its own
+// full-width row below the icons instead of shrinking to fit alongside them.
+@media all and ($mobile) {
+  .sidebar.left {
+    flex-wrap: wrap;
+    row-gap: 0.5rem;
+
+    .page-title {
+      order: 10;
+      flex: 1 1 100%;
+      font-size: 1.3rem;
+      line-height: 1.25;
+      text-align: center;
+    }
+  }
+}
+
+// Graph View and Backlinks default to a two-column row below (max-width:
+// 1200px), which is fine on tablets but too cramped on phones. Stack them
+// on true mobile widths only.
+@media all and ($mobile) {
+  #quartz-body .sidebar.right {
+    flex-direction: column;
+
+    & > * {
+      max-height: none;
+    }
+  }
+}
+
+// The pre-footer <hr>'s default 2rem/2rem margin, plus .custom-footer's own
+// inline marginTop:"2rem" (CustomFooter.tsx) and 2rem/0 padding, stack up to
+// ~145px of empty space before any footer text — a lot on a short mobile
+// screen. Tighten both. The inline style on .custom-footer needs !important
+// to actually lose to a stylesheet rule.
+@media all and ($mobile) {
+  .center hr {
+    margin: 1rem auto;
+  }
+
+  .custom-footer {
+    margin-top: 1rem !important;
+    padding: 1rem 0 !important;
+  }
+}
+
+// Enhancing Explorer (Aba lateral) to look more separated/clean
+.explorer ul {
+  padding-left: 0.5rem;
+}
+.explorer li {
+  margin-bottom: 0.8rem;
+}
+
+/* Hide top-level language folders (pt-br, en) so their children look like top-level items */
+.explorer-ul > li > .folder-container {
+  display: none !important;
+}
+.explorer-ul > li > .folder-outer {
+  display: block !important; /* Override JS collapsing */
+  visibility: visible !important;
+}
+.explorer-ul > li > .folder-outer > ul {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+.explorer-ul > li > .folder-outer > ul > li {
+  margin-top: 0.5rem;
+}
+
+/* Fix Explorer scrollbar issues */
+.explorer-content {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+}
+.explorer {
+  max-height: none !important;
+}
+.explorer .folder-button {
+  font-weight: 600;
+  color: var(--secondary);
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.05em;
+}
+.explorer .folder-button:hover {
+  color: var(--dark);
+}
+
+
+
+
+/* --- Explorer Language Flattening --- */
+
+/* Hide EN root folder entirely on PT-BR pages */
+body[data-slug^="pt-br"] .explorer-ul > li > .folder-container[data-folderpath="en"],
+body[data-slug^="pt-br"] .explorer-ul > li > .folder-container[data-folderpath="en"] + .folder-outer {
+  display: none !important;
+}
+
+/* Hide PT-BR root folder entirely on EN pages */
+body:not([data-slug^="pt-br"]) .explorer-ul > li > .folder-container[data-folderpath="pt-br"],
+body:not([data-slug^="pt-br"]) .explorer-ul > li > .folder-container[data-folderpath="pt-br"] + .folder-outer {
+  display: none !important;
+}
+
+/* For the active language folder, hide the folder name/button itself */
+.explorer-ul > li > .folder-container[data-folderpath="en"],
+.explorer-ul > li > .folder-container[data-folderpath="pt-br"] {
+  display: none !important;
+}
+
+/* For the active language folder, forcefully show and un-indent its children */
+.explorer-ul > li > .folder-container[data-folderpath="en"] + .folder-outer,
+.explorer-ul > li > .folder-container[data-folderpath="pt-br"] + .folder-outer {
+  display: block !important;
+  height: auto !important;
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+  border-left: none !important;
+}
+
+.explorer-ul > li > .folder-container[data-folderpath="en"] + .folder-outer > ul,
+.explorer-ul > li > .folder-container[data-folderpath="pt-br"] + .folder-outer > ul {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+
+/* Hide the root index files (like 'About Me') from showing up in Explorer root */
+.explorer-ul > li:has(> a[href$="/"]) {
+  display: none !important;
+}
+
+/* Language Toggle CSS */
+.nav-lang {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.nav-lang a {
+  font-size: 0.9rem;
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  background: var(--lightgray);
+  color: var(--dark) !important;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.nav-lang a:hover {
+  transform: scale(1.05);
+  background: var(--gray);
+}
+
+/* Author Profile CSS */
+.author-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--light);
+  padding: 1.5rem 1rem;
+  border-radius: 12px;
+  border: 1px solid var(--lightgray);
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.author-avatar {
+  width: 120px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+  border: 3px solid var(--secondary);
+}
+
+.author-bio {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--dark);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.author-detail {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin: 0.3rem 0;
+}
+
+.author-detail a {
+  color: var(--tertiary);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.author-detail a:hover {
+  text-decoration: underline;
+}
+
+details.author-details {
+  border: 1px solid var(--lightgray);
+  border-radius: 8px;
+  background-color: var(--light);
+  padding: 0.5rem;
+  margin-top: 2rem;
+}
+
+summary.author-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  cursor: pointer;
+  list-style: none;
+  color: var(--dark);
+}
+
+summary.author-summary::-webkit-details-marker {
+  display: none;
+}
+
+.author-avatar-small {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+details.author-details[open] .author-summary {
+  border-bottom: 1px solid var(--lightgray);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Custom Footer CSS */
+.custom-footer {
+  margin-top: 4rem;
+  padding: 2rem 0;
+  color: var(--gray);
+}
+
+.custom-footer hr {
+  margin-bottom: 2rem;
+  border-color: var(--lightgray);
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.footer-info h4, .footer-links h4 {
+  color: var(--dark);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.footer-info p {
+  margin: 0.3rem 0;
+  font-size: 0.9rem;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin: 0.4rem 0;
+}
+
+.footer-links a {
+  color: var(--secondary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-size: 0.95rem;
+}
+
+.footer-links a:hover {
+  color: var(--dark);
+}
+
+.footer-bottom {
+  margin-top: 2rem;
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+/* Reader Mode overrides.
+   Earlier versions either hid BOTH sidebars (no way back — the toggle
+   lived inside one of them) or kept the left sidebar as a full grid
+   column (nav + Explorer took up real estate that should've gone to the
+   text). Current behavior on desktop/tablet: collapse the left column
+   entirely — text expands into that space too — but keep the reader-mode
+   toggle itself alive, pulled out of the sidebar's normal flow and
+   floated as a small fixed button at the vertical center of the left
+   edge, so there's still a way to turn it back off. */
+:root[reader-mode="on"] {
+  & .page {
+    max-width: 100%;
+  }
+
+  & .sidebar.right {
+    display: none !important;
+  }
+
+  & .center {
+    max-width: 100% !important;
+    box-sizing: border-box !important;
+    padding-top: 4.5rem !important;
+  }
+
+  /* Ocultar Relógio UTC-3, Título do Site e Cabeçalho no Modo Leitura */
+  .utc3-live-clock,
+  .site-header-block,
+  .site-header-title-container,
+  .header {
+    display: none !important;
+  }
+
+  @media all and ($desktop), all and ($tablet) {
+    & .page > #quartz-body,
+    & #quartz-body {
+      grid-template-columns: auto !important;
+      grid-template-rows: auto auto auto !important;
+      grid-template-areas:
+        "grid-header"
+        "grid-center"
+        "grid-footer" !important;
+    }
+
+    & .center,
+    & footer {
+      box-sizing: border-box !important;
+      padding: 4.5rem 6rem 2rem 5rem !important;
+    }
+
+    /* Botão Flutuante do Modo Leitura no Desktop - Topo Esquerdo */
+    & .sidebar.left {
+      position: fixed !important;
+      top: 1.25rem !important;
+      left: 1.25rem !important;
+      transform: none !important;
+      height: auto !important;
+      width: auto !important;
+      padding: 0 !important;
+      z-index: 1000 !important;
+      opacity: 1 !important;
+      background: transparent !important;
+
+      & .nav-lang,
+      & .page-title,
+      & .site-header-block,
+      & .site-header-title-container,
+      & .utc3-live-clock,
+      & .mobile-only,
+      & .search,
+      & .darkmode,
+      & .explorer {
+        display: none !important;
+      }
+
+      & .flex-component {
+        gap: 0;
+      }
+
+      & .readermode {
+        width: 44px !important;
+        height: 44px !important;
+        border-radius: 12px !important;
+        background: var(--lightgray) !important;
+        border: 1px solid var(--gray) !important;
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        cursor: pointer !important;
+        transition: all 0.2s ease !important;
+
+        &:hover {
+          background: var(--secondary) !important;
+          transform: scale(1.06) !important;
+
+          svg {
+            fill: var(--light) !important;
+            stroke: var(--light) !important;
+          }
+        }
+
+        & svg {
+          position: static !important;
+          width: 20px !important;
+          height: 20px !important;
+          fill: var(--dark) !important;
+          stroke: var(--dark) !important;
+        }
+      }
+    }
+  }
+
+  @media all and ($mobile) {
+    & .sidebar.left {
+      position: fixed !important;
+      top: 0.85rem !important;
+      right: 0.85rem !important;
+      left: auto !important;
+      transform: none !important;
+      height: auto !important;
+      width: auto !important;
+      padding: 0 !important;
+      z-index: 1000 !important;
+      opacity: 1 !important;
+
+      & .nav-lang,
+      & .page-title,
+      & .site-header-block,
+      & .site-header-title-container,
+      & .utc3-live-clock,
+      & .mobile-only,
+      & .search,
+      & .darkmode,
+      & .explorer {
+        display: none !important;
+      }
+
+      & .readermode {
+        width: 40px !important;
+        height: 40px !important;
+        border-radius: 10px !important;
+        background: var(--lightgray) !important;
+        border: 1px solid var(--gray) !important;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15) !important;
+        display: flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+
+        & svg {
+          position: static !important;
+          width: 18px !important;
+          height: 18px !important;
+          fill: var(--dark) !important;
+          stroke: var(--dark) !important;
+        }
+      }
+    }
+
+    & .center {
+      padding-top: 4.2rem !important;
+      padding-left: 1rem !important;
+      padding-right: 1rem !important;
+    }
+  }
+}
+
+/* Labeled dates line ("Criado em: X · Modificado em: Y"). The unlabeled
+   modified date that ContentMeta prepends to the reading time is hidden so
+   the same date doesn't show twice — reading time stays. */
+.created-date {
+  margin-top: -0.5rem;
+  color: var(--darkgray);
+  font-size: 0.9rem;
+}
+
+.content-meta > time {
+  display: none;
+}
+
+/* Hide the auto-generated "N items in this folder" listing that folder-page
+   appends below every folder index page's own content (in every locale). */
+.page-listing {
+  display: none !important;
+}
+
+/* --- Media Carousel --- */
+.media-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  margin: 2rem 0;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.media-carousel::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.carousel-slide {
+  flex: 0 0 85%;
+  scroll-snap-align: center;
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.carousel-slide:hover {
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.carousel-slide img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  display: block;
+  cursor: zoom-in;
+}
+
+/* Hover "lightbox", driven by the .zoomed class (toggled by JS in this
+   plugin's afterDOMLoaded script, after 1s of sustained hover — see
+   dist/components/index.js). CSS :hover/transition-delay alone couldn't
+   do this reliably: `position` is a discrete property, so browsers were
+   applying it immediately regardless of transition-delay, flashing the
+   image in the wrong spot for that first second before snapping to the
+   correct centered/enlarged one. Explicit class toggling has no such
+   ambiguity — nothing here reacts until JS says so, and reverts the
+   instant the mouse leaves. Mouse-only by nature (no touch equivalent). */
+.carousel-slide.zoomed::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  z-index: 500;
+  /* Let hover/click pass through to whatever's actually underneath —
+     otherwise this full-viewport layer would itself count as "still
+     hovering the slide" everywhere on screen, and mouseleave would only
+     ever fire when the pointer left the browser window entirely. */
+  pointer-events: none;
+}
+
+.carousel-slide.zoomed img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* auto width/height (capped by max-*) instead of a fixed box — the
+     lightbox hugs the photo's real aspect ratio, no letterboxing bars. */
+  width: auto;
+  height: auto;
+  max-width: min(90vw, 1200px);
+  max-height: 88vh;
+  object-fit: contain;
+  border-radius: 12px;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  cursor: zoom-out;
+  z-index: 501;
+}
+
+.carousel-zoom-close,
+.carousel-zoom-prev,
+.carousel-zoom-next {
+  display: none;
+  position: fixed;
+  z-index: 502;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  font-size: 1.4rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.carousel-zoom-close:hover,
+.carousel-zoom-prev:hover,
+.carousel-zoom-next:hover {
+  background: rgba(0, 0, 0, 0.85);
+}
+
+.carousel-slide.zoomed .carousel-zoom-close,
+.carousel-slide.zoomed .carousel-zoom-prev,
+.carousel-slide.zoomed .carousel-zoom-next {
+  display: flex;
+}
+
+.carousel-slide.zoomed .carousel-zoom-close {
+  top: 1.5rem;
+  right: 1.5rem;
+}
+
+.carousel-slide.zoomed .carousel-zoom-prev {
+  top: 50%;
+  left: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.carousel-slide.zoomed .carousel-zoom-next {
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+}
+
+.slide-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0,0,0,0.8));
+  color: white;
+  padding: 1.5rem 1rem 1rem;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+/* --- Contact form --- */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-width: 480px;
+  margin: 1.5rem 0;
+}
+
+.contact-form input,
+.contact-form textarea {
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 6px;
+  background: var(--light);
+  color: var(--dark);
+  resize: vertical;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: var(--secondary);
+}
+
+.contact-form button {
+  align-self: flex-start;
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 0.6rem 1.4rem;
+  border: none;
+  border-radius: 6px;
+  background: var(--secondary);
+  color: var(--light);
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+}
+
+.contact-form button:hover {
+  opacity: 0.85;
+}
+
+#contact-form-status {
+  font-size: 0.9rem;
+  color: var(--gray);
+  margin: 0;
+}
+
+/* --- Journal Clubs (pt-br/research/journal-clubs) ---
+   Deliberately not the media-carousel component: these are article citations,
+   not images, so a vertical list of text cards reads better than a horizontal
+   image strip. */
+.jc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  margin: 1.5rem 0;
+}
+
+.jc-card {
+  display: block;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 10px;
+  background: var(--light);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease;
+}
+
+.jc-card:hover {
+  border-color: var(--secondary);
+  transform: translateX(2px);
+}
+
+.jc-card-title {
+  font-weight: 600;
+  color: var(--dark);
+  margin-bottom: 0.2rem;
+}
+
+.jc-card-meta {
+  font-size: 0.85rem;
+  color: var(--gray);
+  margin-bottom: 0.35rem;
+}
+
+.jc-card-summary {
+  font-size: 0.95rem;
+  color: var(--darkgray);
+  margin-bottom: 0.45rem;
+}
+
+.jc-card-tag {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  padding: 0.15rem 0.55rem;
+  border-radius: 999px;
+  background: var(--highlight);
+  color: var(--secondary);
+}
+
+/* --- Language picker (content/index.md) ---
+   Deliberately NOT .media-carousel/.carousel-slide: the photo-carousel plugin
+   binds a hover lightbox to every .carousel-slide on the page, and zooming a
+   flag that exists purely to be clicked through to another language would be
+   noise. Same visual language as the other card strips (rounded cards, brand
+   border on hover), minus the zoom. */
+.lang-carousel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+
+.lang-slide {
+  flex: 1 1 150px;
+  max-width: 240px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.1rem 0.9rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  background: var(--light);
+  text-decoration: none;
+  color: inherit;
+  transition:
+    border-color 0.15s ease,
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+.lang-slide:hover {
+  border-color: var(--secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+.lang-slide img {
+  display: block;
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+}
+
+.lang-slide-name {
+  font-weight: 600;
+  color: var(--dark);
+}
+
+.lang-slide-note {
+  font-size: 0.8rem;
+  line-height: 1.3;
+  text-align: center;
+  color: var(--gray);
+}
+
+/* --- Bases (plugin bases-page) ---
+   O plugin só traz strings en-US, então uma view vazia imprime "No data found."
+   num site inteiramente pt-BR. Esconder é mais barato que forkar o plugin por
+   causa de uma string; as páginas que hoje têm view vazia trazem a própria
+   frase em português no markdown. Quando houver dados, a tabela renderiza
+   normalmente e esta regra não se aplica. */
+.bases-empty {
+  display: none;
+}
+
+/* --- Journal Club: botão de ação e bloco de chamada ---
+   Usados direto no markdown das páginas do clube (mailto de sugestão, mailto de
+   inscrição no grupo, botão de copiar a chamada). As estatísticas do dashboard
+   trazem o próprio CSS, dentro de local-plugins/jc-dashboard. */
+.jc-button {
+  display: inline-block;
+  margin: 0.4rem 0 1.2rem;
+  padding: 0.55rem 1.1rem;
+  border: 1px solid var(--secondary);
+  border-radius: 8px;
+  background: var(--light);
+  color: var(--secondary);
+  font-size: 0.95rem;
+  font-weight: 600;
+  font-family: inherit;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background 0.15s ease,
+    color 0.15s ease;
+}
+
+.jc-button:hover {
+  background: var(--secondary);
+  color: var(--light);
+}
+
+.jc-digest {
+  margin: 1rem 0 1.5rem;
+}
+
+.jc-digest pre {
+  padding: 1rem 1.1rem;
+  border: 1px solid var(--lightgray);
+  border-radius: 10px;
+  background: var(--lightgray);
+  color: var(--darkgray);
+  font-family: inherit;
+  font-size: 0.92rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  overflow-x: auto;
+}
+
+/* --- Página 404 (centralizada, bonita) --- */
+.notfound {
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 1.1rem;
+  padding: 3rem 1.5rem;
+}
+
+.notfound-gif {
+  width: min(320px, 70vw);
+  height: auto;
+  border-radius: 14px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.18);
+}
+
+.notfound-emoji {
+  font-size: 6rem;
+  line-height: 1;
+  animation: nf-float 2.4s ease-in-out infinite;
+}
+
+@keyframes nf-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.notfound h1 {
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+  margin: 0;
+  background: linear-gradient(90deg, var(--secondary), var(--tertiary));
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.notfound p {
+  max-width: 46ch;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--darkgray);
+  margin: 0;
+}
+
+.notfound-btn {
+  display: inline-block;
+  padding: 0.7rem 1.4rem;
+  border-radius: 999px;
+  background: var(--secondary);
+  color: var(--light);
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.notfound-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.notfound-btn-secondary {
+  background: transparent;
+  color: var(--secondary);
+  border: 1px solid var(--secondary);
+}
+
+/* ==========================================================================
+   📱 FULL-WIDTH EQUALLY DISTRIBUTED MOBILE HEADER (SOMENTE MOBILE)
+   ========================================================================== */
+
+@media all and ($mobile) {
+  .sidebar.left {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    padding: 0.5rem 0 !important;
+    gap: 0.35rem !important;
+
+    /* 1. Botão do Explorar (Apenas ícone 40x40) */
+    .explorer-toggle.mobile-explorer {
+      order: 1 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: 40px !important;
+      height: 40px !important;
+      padding: 0 !important;
+      margin: 0 !important;
+      border-radius: 8px !important;
+      background: var(--lightgray) !important;
+      border: 1px solid var(--gray, #e2e8f0) !important;
+      color: var(--dark) !important;
+      box-shadow: none !important;
+
+      &::after {
+        content: none !important;
+      }
+    }
+
+    /* 2. Botão de Pesquisa (Largura expandida para preencher o centro) */
+    .search {
+      order: 2 !important;
+      flex: 1 1 auto !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: 70px !important;
+      height: 40px !important;
+      margin: 0 !important;
+      padding: 0 0.4rem !important;
+      border-radius: 8px !important;
+      background: var(--lightgray) !important;
+
+      button {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        height: 100% !important;
+        padding: 0 !important;
+      }
+    }
+
+    /* 3. Ícone do Modo Noturno */
+    .darkmode, .readermode {
+      order: 3 !important;
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      min-width: 40px !important;
+      height: 40px !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      border-radius: 8px !important;
+      background: var(--lightgray) !important;
+    }
+
+    /* 4. Bandeiras de Idioma (Distribuídas com espaçamento igual) */
+    .nav-lang {
+      order: 4 !important;
+      display: flex !important;
+      align-items: center !important;
+      justify-content: space-between !important;
+      gap: 0.35rem !important;
+      margin: 0 !important;
+
+      a {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        flex: 1 !important;
+        min-width: 36px !important;
+        height: 40px !important;
+        padding: 0 0.35rem !important;
+        border-radius: 8px !important;
+        background: var(--lightgray) !important;
+        font-size: 1rem !important;
+        color: var(--dark) !important;
+        text-decoration: none !important;
+      }
+    }
+
+    /* 5. Linha 2: Título "Pedro H. R. de Andrade" e Relógio UTC-3 centralizados */
+    .site-header-title-container {
+      order: 10 !important;
+      flex: 1 1 100% !important;
+      align-items: center !important;
+      text-align: center !important;
+      margin: 0.35rem 0 0.1rem 0 !important;
+
+      .page-title {
+        font-size: 1.35rem !important;
+        font-weight: 700 !important;
+        line-height: 1.25 !important;
+        text-align: center !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        color: var(--dark) !important;
+      }
+
+      .utc3-live-clock {
+        margin-top: 0.2rem !important;
+        font-size: 0.8rem !important;
+        justify-content: center !important;
+      }
+    }
+  }
+}
+
+
+
+
+
+

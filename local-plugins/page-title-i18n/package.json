@@ -1,0 +1,34 @@
+{
+  "name": "page-title-i18n",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "description": "PageTitle component that shows the sidebar title in the language of the page currently being viewed (pt-br/en/es/fr), instead of one fixed bilingual string",
+  "exports": {
+    ".": "./dist/index.js",
+    "./components": "./dist/components/index.js",
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "peerDependencies": {
+    "preact": "^10.0.0"
+  },
+  "quartz": {
+    "name": "page-title-i18n",
+    "displayName": "Page Title (i18n)",
+    "category": "component",
+    "version": "1.0.0",
+    "quartzVersion": ">=5.0.0",
+    "dependencies": [],
+    "defaultOrder": 10,
+    "defaultEnabled": true,
+    "defaultOptions": {},
+    "components": {
+      "PageTitle": {
+        "displayName": "Page Title (i18n)",
+        "defaultPosition": "left",
+        "defaultPriority": 10
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.DS_Store
+*.sync-conflict-*
+node_modules
+public
+prof
+tsconfig.tsbuildinfo
+.obsidian
+.quartz-cache
+private/
+.replit
+replit.nix
+.quartz/
+quartz/cli/tui/dist/
+._*
+.trash/
+content/pt-br/resource/escolainverno/Complemento/
+# Raw personal vault dump -- contains ID documents, transcripts, and
+# github-recovery-codes.txt under 00 - Documentos/Pedro/. None of this is
+# markdown gated by publish:true; the asset emitter copies files verbatim
+# regardless of frontmatter, so this must never be committed as a whole.
+# Reference material gets deliberately migrated out into real content
+# (content/assets/, content/pt-br/resource/...) as it's processed.
+content/pt-br/adicionais/
+cap30.pdf
+
+# Python cache (não versionar)
+__pycache__/
+*.pyc
