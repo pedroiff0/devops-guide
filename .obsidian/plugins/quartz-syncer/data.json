@@ -1,0 +1,50 @@
+{
+  "git": {
+    "remoteUrl": "https://github.com/pedroiff0/page.git",
+    "branch": "main",
+    "corsProxyUrl": "http://100.120.54.126:9999",
+    "auth": {
+      "type": "basic",
+      "username": "pedroiff0"
+    },
+    "providerHint": "github"
+  },
+  "vaultPath": "10 - site/content/",
+  "contentFolder": "content",
+  "publishFrontmatterKey": "publish",
+  "allNotesPublishableByDefault": false,
+  "showCreatedTimestamp": true,
+  "showUpdatedTimestamp": true,
+  "showPublishedTimestamp": true,
+  "usePermalink": false,
+  "includeAllFrontmatter": false,
+  "frontmatterFormat": "yaml",
+  "createdTimestampKey": "created, created_at, date",
+  "updatedTimestampKey": "modified, lastmod, updated, last-modified",
+  "publishedTimestampKey": "published, publishDate, date",
+  "timestampFormat": "MMM dd, yyyy h:mm a",
+  "useCache": true,
+  "syncCache": false,
+  "persistCache": false,
+  "cacheTimestamp": 0,
+  "cache": "{}",
+  "useAutoCardLink": false,
+  "useDataview": true,
+  "useDatacore": false,
+  "useExcalidraw": false,
+  "useFantasyStatblocks": false,
+  "useBases": false,
+  "useCanvas": false,
+  "manageSyncerStyles": true,
+  "lastUsedSettingsTab": "git",
+  "noteSettingsIsInitialized": true,
+  "pluginVersion": "1.15.3",
+  "lastUpstreamCommitSha": "",
+  "upgradeCheckStrategy": "version",
+  "diffViewStyle": "auto",
+  "ENABLE_DEVELOPER_TOOLS": false,
+  "logLevel": {
+    "value": 1,
+    "name": "TRACE"
+  }
+}

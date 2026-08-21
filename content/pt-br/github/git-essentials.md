@@ -1,5 +1,6 @@
 ---
 title: "Fundamentos & Mecânica Interna do Git"
+author: "Pedro Andrade & Everton"
 description: "Guia detalhado sobre o funcionamento interno do Git, árvore de objetos, estratégias de branch, rebase interativo, stash, cherry-pick e recuperação de dados com reflog."
 order: 10
 tags:

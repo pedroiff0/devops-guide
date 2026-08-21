@@ -3,13 +3,16 @@
 node_modules
 public
 prof
-tsconfig.tsbuildinfo
-.obsidian
-.quartz-cache
+# Obsidian Workspace & Cache (preserve .obsidian configs and plugins)
+.obsidian/workspace*.json
+.obsidian/cache/
+.obsidian/workspaces.json
 private/
 .replit
 replit.nix
 .quartz/
+.quartz-cache/
+**/.quartz-cache/**
 quartz/cli/tui/dist/
 ._*
 .trash/

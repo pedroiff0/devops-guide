@@ -1,5 +1,6 @@
 ---
 title: "Digital Gardens with Quartz v4 & GitHub Pages"
+author: "Pedro Andrade & Everton"
 description: "How to transform Markdown vaults into an interactive second brain using Quartz v4, bidirectional graph networks, instant search, and GitHub Pages."
 order: 60
 tags:

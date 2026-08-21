@@ -1,5 +1,6 @@
 ---
 title: "Git Essentials & Internal Mechanics"
+author: "Pedro Andrade & Everton"
 description: "In-depth guide on Git internal mechanics, the object tree, branch strategies, interactive rebase, stash, cherry-pick, and disaster recovery with reflog."
 order: 10
 tags:

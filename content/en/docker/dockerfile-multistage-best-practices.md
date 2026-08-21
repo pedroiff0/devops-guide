@@ -1,5 +1,6 @@
 ---
 title: "Production Multi-Stage Dockerfile Patterns"
+author: "Pedro Andrade & Everton"
 description: "Building lightweight, secure, and blazingly fast Docker images using Multi-Stage Builds, smart layer caching, BuildKit, and non-root users."
 order: 20
 tags:

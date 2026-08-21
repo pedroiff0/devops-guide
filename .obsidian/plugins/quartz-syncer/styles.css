@@ -1,0 +1,719 @@
+/* Quartz Syncer Publication Center */
+.quartz-syncer-publisher-title-separator {
+	margin-top: 0;
+	margin-bottom: 15px;
+}
+
+.quartz-syncer-publisher-footer-separator {
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.quartz-syncer-publisher-footer {
+	display: flex;
+	justify-content: flex-end;
+	position: sticky;
+	bottom: 0;
+}
+
+.quartz-syncer-publisher-loading-msg {
+	font-size: var(--font-ui-larger);
+	display: flex;
+	flex-grow: 0; /* Prevnets the loading message from stretching the container */
+	align-items: center;
+	flex-direction: column;
+}
+
+.quartz-syncer-progress-bar-text {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+button.quartz-syncer-publisher-button {
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+	cursor: var(--cursor);
+	font-weight: var(--font-bold);
+}
+
+.quartz-syncer-publisher-loading-container {
+	width: 100%;
+	height: 5px;
+	margin-top: 10px;
+}
+
+.quartz-syncer-publisher-loading-bar {
+	background-color: var(--interactive-accent);
+	height: 100%;
+	transition: all 0.5s ease-in-out;
+}
+
+.quartz-syncer-publisher-published {
+	color: var(--text-success, var(--color-green));
+}
+
+.quartz-syncer-publisher-deleted {
+	color: var(--text-error, var(--color-red));
+}
+
+/* Quartz Syncer Diff View */
+.quartz-syncer-diff-modal {
+	max-width: var(--modal-max-width, 100%);
+	width: var(--modal-width, 100%);
+}
+
+body.is-mobile .quartz-syncer-diff-modal {
+	width: 100%;
+}
+
+body.is-mobile .quartz-syncer-diff-view-container {
+	overflow-x: auto;
+}
+
+pre.quartz-syncer-diff-view {
+	display: block;
+	white-space: pre;
+	overflow-wrap: break-word;
+	width: fit-content;
+}
+
+pre.quartz-syncer-diff-view.quartz-syncer-diff-added {
+	background-color: rgb(
+		var(--background-modifier-success-rgb, var(--color-green-rgb)),
+		0.5
+	);
+	color: var(--text-on-accent);
+}
+
+pre.quartz-syncer-diff-view.quartz-syncer-diff-removed {
+	background-color: rgb(
+		var(--background-modifier-error-rgb, var(--color-red-rgb)),
+		0.5
+	);
+	color: var(--text-on-accent);
+}
+
+.quartz-syncer-diff-line {
+	white-space: pre;
+	overflow-wrap: break-word;
+}
+
+.quartz-syncer-diff-line-added {
+	background-color: var(--text-success, var(--color-green));
+	color: var(--text-on-accent);
+	text-decoration: overline;
+}
+
+.quartz-syncer-diff-line-removed {
+	background-color: var(--text-error, var(--color-red));
+	color: var(--text-on-accent);
+	text-decoration: line-through;
+}
+
+/* Quartz Syncer Tree Selectors */
+.quartz-syncer-modal-content ul {
+	margin: 0;
+	list-style: none;
+	padding-left: 1.2rem;
+	user-select: none;
+}
+
+.quartz-syncer-modal-content li {
+	margin: 0.2rem 0;
+}
+
+.quartz-syncer-modal-content .no-arrow {
+	padding-left: calc(var(--icon-size) + 2px);
+}
+
+.quartz-syncer-modal-content .arrow {
+	cursor: var(--cursor);
+	display: inline-block;
+	transition: transform 200ms;
+}
+
+/* arrowDown svelte variable */
+.quartz-syncer-modal-content .arrowDown {
+	transform: rotate(90deg);
+}
+
+/* isRoot svelte variable */
+.quartz-syncer-modal-content ul.isRoot {
+	padding-left: 0;
+}
+
+.quartz-syncer-modal-content .root-header {
+	font-weight: var(--font-bold);
+	font-size: var(--font-ui-larger);
+}
+
+input:indeterminate {
+	background-color: var(--checkbox-color);
+	border-color: var(--checkbox-color);
+}
+
+input[type="checkbox"]:indeterminate::after {
+	content: "";
+	top: -1px;
+	left: -1px;
+	position: absolute;
+	width: var(--checkbox-size);
+	height: var(--checkbox-size);
+	display: block;
+	background-color: var(--checkbox-marker-color);
+	mask-position: 52% 52%;
+	mask-size: 65%;
+	mask-repeat: no-repeat;
+	mask-image: url('data:image/svg+xml; utf8,<svg fill="none" width="12px" height="12px" viewBox="0 0 32 32" id="icon" xmlns="http://www.w3.org/2000/svg"><rect fill="%23000000" x="4" y="4" width="24" height="24"/></svg>');
+}
+
+.quartz-syncer-icon-diff {
+	cursor: var(--cursor);
+	display: inline-block;
+	margin-left: 4px;
+}
+
+/* File type badges */
+.quartz-syncer-file-badge {
+	font-size: 9px;
+	font-weight: var(--font-bold);
+	padding: 1px 4px;
+	border-radius: var(--radius-s);
+	margin-left: 6px;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+.quartz-syncer-badge-base {
+	background-color: rgb(var(--color-purple-rgb, 147, 51, 234), 0.2);
+	color: var(--text-accent, var(--color-purple, #9333ea));
+	border: 1px solid rgb(var(--color-purple-rgb, 147, 51, 234), 0.3);
+}
+
+.quartz-syncer-badge-canvas {
+	background-color: rgb(var(--color-cyan-rgb, 6, 182, 212), 0.2);
+	color: var(--text-accent, var(--color-cyan, #06b6d4));
+	border: 1px solid rgb(var(--color-cyan-rgb, 6, 182, 212), 0.3);
+}
+
+/* Quartz Syncer Settings */
+
+.quartz-syncer-settings button:disabled,
+.quartz-syncer-publish-status-view button:disabled {
+	pointer-events: none;
+	opacity: 0.4;
+}
+
+.quartz-syncer-publish-status-view ul {
+	list-style-type: none;
+	position: relative;
+	margin-left: 5px;
+	margin-top: 0;
+	max-height: 250px;
+	overflow: auto;
+}
+
+.quartz-syncer-publish-status-view h2 {
+	margin-top: 0;
+	margin-bottom: 5px;
+}
+
+.quartz-syncer-publish-status-view .collapsable {
+	cursor: var(--cursor);
+	margin-left: 10px;
+}
+
+.quartz-syncer-settings-enabled
+	> .setting-item-info
+	> .setting-item-name::after {
+	content: " (plugin enabled)";
+	color: var(--text-success, var(--color-green));
+	font-weight: var(--font-bold);
+}
+
+.quartz-syncer-settings-disabled > .setting-item-info > .setting-item-name {
+	color: var(--text-error, var(--color-red));
+}
+
+.quartz-syncer-settings-disabled
+	> .setting-item-info
+	> .setting-item-name::after {
+	content: " (plugin disabled)";
+	color: var(--text-error, var(--color-red));
+	font-weight: var(--font-bold);
+}
+
+.quartz-syncer-settings-disabled > .setting-item-control > .checkbox-container {
+	background-color: var(--text-error, var(--color-red));
+}
+
+.quartz-syncer-settings .setting-item-heading {
+	margin-top: var(--heading-spacing);
+}
+
+.quartz-syncer-settings-description {
+	margin-bottom: 10px;
+}
+
+.quartz-syncer-settings .svg-icon {
+	margin-right: 10px;
+}
+
+.quartz-syncer-navigation-item-icon > svg.svg-icon {
+	margin-right: 0;
+}
+
+.quartz-syncer-svg-icon {
+	margin-right: 4px;
+}
+
+/* GitHub connection status */
+.quartz-syncer-connection-status {
+	font-weight: var(--font-bold);
+}
+
+.quartz-syncer-connection-status-failed {
+	color: var(--text-error, var(--color-red));
+}
+
+.quartz-syncer-connection-status-success {
+	color: var(--text-success, var(--color-green));
+}
+
+.quartz-syncer-connection-status-pending {
+	color: var(--text-warning, var(--color-orange));
+}
+
+/* Cog animation */
+@keyframes quartz-syncer-rotate-animation {
+	0% {
+		transform: rotate(0deg);
+	}
+
+	100% {
+		transform: rotate(360deg);
+	}
+}
+
+.quartz-syncer-rotate {
+	animation: quartz-syncer-rotate-animation 4s linear infinite;
+}
+
+.quartz-syncer-cog {
+	margin-left: 3px;
+}
+
+.quartz-syncer-cog-big {
+	width: 40px;
+	height: 40px;
+}
+
+/* Progress bar */
+.quartz-syncer-progress-bar-container {
+	width: 100%;
+	height: 40px;
+	margin-top: 10px;
+}
+
+/* Publication center */
+
+.quartz-syncer-modal-content:first-child {
+	width: 100%;
+}
+
+/* Folder select */
+.quartz-syncer-settings .search-input-container::before {
+	display: none;
+}
+
+.quartz-syncer-settings .search-input-container input {
+	padding-inline-start: 0;
+	padding: 4px 8px;
+}
+
+.quartz-syncer-settings.quartz-syncer-desktop .search-input-container input {
+	width: unset;
+}
+
+/* Settings tabs */
+.quartz-syncer-navigation-item {
+	cursor: var(--cursor);
+	border: var(--border-width) solid var(--background-modifier-border);
+	border-radius: var(--radius-m) var(--radius-m) var(--radius-s)
+		var(--radius-s);
+	font-weight: var(--font-bold);
+	font-size: var(--font-text-size);
+	display: flex;
+	flex-shrink: 0;
+	flex-direction: row;
+	white-space: nowrap;
+	padding: 4px 6px;
+	align-items: center;
+	gap: 4px;
+	overflow: hidden;
+	background-color: var(--background-secondary-alt);
+	transition:
+		color 0.25s ease-in-out,
+		padding 0.25s ease-in-out,
+		background-color 0.35s cubic-bezier(0.45, 0.25, 0.83, 0.67),
+		max-width 0.35s cubic-bezier(0.57, 0.04, 0.58, 1);
+	height: 32px;
+}
+
+@media screen and (width <= 1325px) {
+	.quartz-syncer-navigation-item.quartz-syncer-desktop {
+		max-width: 32px;
+	}
+}
+
+@media screen and (width <= 800px) {
+	.quartz-syncer-navigation-item.quartz-syncer-mobile {
+		max-width: 32px;
+	}
+}
+
+.quartz-syncer-navigation-item-icon,
+.quartz-syncer-warning {
+	padding-top: 5px;
+}
+
+.quartz-syncer-navigation-item:hover {
+	border-color: var(--interactive-accent-hover);
+	border-bottom: 0;
+}
+
+.quartz-syncer-navigation-item.quartz-syncer-navigation-item-active {
+	background-color: var(--interactive-accent);
+	color: var(--text-on-accent);
+	padding: 4px 9px;
+	max-width: 100%;
+	border: var(--border-width) solid var(--background-modifier-border);
+	border-radius: var(--radius-m) var(--radius-m) var(--radius-s)
+		var(--radius-s);
+	border-bottom: 0;
+	transition:
+		color 0.25s ease-in-out,
+		padding 0.25s ease-in-out,
+		background-color 0.35s cubic-bezier(0.45, 0.25, 0.83, 0.67),
+		max-width 0.45s cubic-bezier(0.57, 0.04, 0.58, 1) 0.2s;
+}
+
+.quartz-syncer-settings {
+	transition: transform 400ms 0s;
+}
+
+.quartz-syncer-setting-title {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	gap: 30px;
+}
+
+.quartz-syncer-setting-title.quartz-syncer-mobile {
+	justify-content: space-around;
+}
+
+.quartz-syncer-setting-title h1 {
+	font-weight: 900;
+	margin-top: 6px;
+	margin-bottom: 12px;
+}
+
+.quartz-syncer-setting-header {
+	margin-bottom: 24px;
+	overflow: auto hidden;
+}
+
+.quartz-syncer-setting-header .quartz-syncer-setting-tab-group {
+	display: flex;
+	align-items: flex-end;
+	overflow-x: auto;
+	width: 100%;
+}
+
+.quartz-syncer-setting-tab-group {
+	margin-top: 6px;
+	padding-left: 2px;
+	padding-right: 2px;
+	border-bottom: var(--border-width) solid var(--background-modifier-border);
+}
+
+.quartz-syncer-setting-header .quartz-syncer-tab-settings {
+	padding: 6px 12px;
+	font-weight: 600;
+	cursor: var(--cursor);
+	white-space: nowrap;
+	border-left: var(--border-width) solid var(--background-modifier-border);
+	border-right: var(--border-width) solid var(--background-modifier-border);
+}
+
+.quartz-syncer-setting-header .quartz-syncer-tab-settings:first-child {
+	margin-left: 6px;
+}
+
+.quartz-syncer-setting-header
+	.quartz-syncer-tab-settings.quartz-syncer-tab-settings-active {
+	border-bottom: var(--border-width) solid var(--background-primary);
+	transform: translateY(2px);
+	border-radius: var(--radius-s);
+	border-left: var(--border-width) solid var(--background-modifier-border);
+	border-top: var(--border-width) solid var(--background-modifier-border);
+	border-right: var(--border-width) solid var(--background-modifier-border);
+}
+
+.quartz-syncer-setting-content
+	.quartz-syncer-tab-settings.quartz-syncer-tab-settings-active {
+	display: block;
+}
+
+.quartz-syncer-setting-content
+	.quartz-syncer-tab-settings:not(.quartz-syncer-tab-settings-active) {
+	display: none;
+}
+
+body.is-phone
+	.quartz-syncer-navigation-item:not(.quartz-syncer-navigation-item-active)
+	> span:nth-child(2),
+body.is-tablet
+	.quartz-syncer-navigation-item:not(.quartz-syncer-navigation-item-active)
+	> span:nth-child(2),
+body.is-mobile
+	.quartz-syncer-navigation-item:not(.quartz-syncer-navigation-item-active)
+	> span:nth-child(2) {
+	border: 0;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
+}
+
+/* Token/Secret Storage UI */
+.quartz-syncer-token-container {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	width: 100%;
+}
+
+.quartz-syncer-token-status {
+	font-size: var(--font-ui-smaller);
+	padding: 4px 8px;
+	border-radius: var(--radius-s);
+	display: inline-flex;
+	align-items: center;
+	gap: 4px;
+}
+
+.quartz-syncer-token-status::before {
+	content: "";
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.quartz-syncer-token-status-set {
+	background-color: rgb(var(--color-green-rgb), 0.15);
+	color: var(--text-success, var(--color-green));
+}
+
+.quartz-syncer-token-status-set::before {
+	background-color: var(--text-success, var(--color-green));
+}
+
+.quartz-syncer-token-status-unset {
+	background-color: rgb(var(--color-orange-rgb), 0.15);
+	color: var(--text-warning, var(--color-orange));
+}
+
+.quartz-syncer-token-status-unset::before {
+	background-color: var(--text-warning, var(--color-orange));
+}
+
+.quartz-syncer-token-input-container {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+}
+
+.quartz-syncer-token-input {
+	flex: 1;
+	padding: 6px 10px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s);
+	background-color: var(--background-primary);
+	color: var(--text-normal);
+	font-family: var(--font-monospace);
+}
+
+.quartz-syncer-token-input:focus {
+	border-color: var(--interactive-accent);
+	outline: none;
+}
+
+.quartz-syncer-token-toggle {
+	padding: 6px;
+	border: none;
+	background: transparent;
+	cursor: var(--cursor);
+	color: var(--text-muted);
+	border-radius: var(--radius-s);
+}
+
+.quartz-syncer-token-toggle:hover {
+	color: var(--text-normal);
+	background-color: var(--background-modifier-hover);
+}
+
+.quartz-syncer-token-buttons {
+	display: flex;
+	gap: 8px;
+}
+
+.quartz-syncer-token-buttons button {
+	padding: 6px 12px;
+	border-radius: var(--radius-s);
+	cursor: var(--cursor);
+	font-size: var(--font-ui-small);
+}
+
+/* Plugin Browser Modal */
+.quartz-syncer-plugin-browser {
+	width: 700px;
+	max-width: 90vw;
+}
+
+.quartz-syncer-plugin-browser .modal-content {
+	max-height: 70vh;
+	overflow-y: auto;
+	padding: 0 16px 16px;
+}
+
+.quartz-syncer-plugin-browser-loading {
+	text-align: center;
+	color: var(--text-muted);
+	padding: 24px 0;
+}
+
+.quartz-syncer-plugin-browser-controls {
+	display: flex;
+	gap: 8px;
+	margin-bottom: 12px;
+	position: sticky;
+	top: 0;
+	background: var(--modal-background);
+	padding: 8px 0;
+	z-index: 1;
+}
+
+.quartz-syncer-plugin-browser-search {
+	flex: 1;
+	padding: 6px 10px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: var(--font-ui-small);
+}
+
+.quartz-syncer-plugin-browser-tag-filter {
+	padding: 6px 10px;
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-s);
+	background: var(--background-primary);
+	color: var(--text-normal);
+	font-size: var(--font-ui-small);
+}
+
+.quartz-syncer-plugin-browser-list {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.quartz-syncer-plugin-browser-empty {
+	text-align: center;
+	color: var(--text-muted);
+	padding: 16px 0;
+}
+
+.quartz-syncer-plugin-browser-card {
+	border: 1px solid var(--background-modifier-border);
+	border-radius: var(--radius-m);
+	padding: 12px;
+}
+
+.quartz-syncer-plugin-browser-card-header {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	margin-bottom: 4px;
+}
+
+.quartz-syncer-plugin-browser-card-name {
+	font-weight: var(--font-bold);
+	font-size: var(--font-ui-medium);
+}
+
+.quartz-syncer-plugin-browser-badge-official {
+	font-size: var(--font-ui-smaller);
+	color: var(--text-on-accent);
+	background: var(--interactive-accent);
+	padding: 1px 6px;
+	border-radius: var(--radius-s);
+}
+
+.quartz-syncer-plugin-browser-card-desc {
+	color: var(--text-muted);
+	font-size: var(--font-ui-small);
+	margin: 0 0 8px;
+}
+
+.quartz-syncer-plugin-browser-card-footer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 8px;
+}
+
+.quartz-syncer-plugin-browser-card-tags {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 4px;
+}
+
+.quartz-syncer-plugin-browser-tag {
+	font-size: var(--font-ui-smaller);
+	color: var(--text-muted);
+	background: var(--background-secondary);
+	padding: 1px 6px;
+	border-radius: var(--radius-s);
+}
+
+.quartz-syncer-plugin-browser-installed {
+	font-size: var(--font-ui-small);
+	color: var(--text-success);
+	font-weight: var(--font-bold);
+}
+
+.quartz-syncer-plugin-browser-install-btn {
+	padding: 4px 12px;
+	border-radius: var(--radius-s);
+	background: var(--interactive-accent);
+	color: var(--text-on-accent);
+	cursor: var(--cursor);
+	font-size: var(--font-ui-small);
+	font-weight: var(--font-bold);
+	border: none;
+	white-space: nowrap;
+}
+
+.quartz-syncer-plugin-browser-install-btn:disabled {
+	opacity: 0.6;
+	cursor: not-allowed;
+}

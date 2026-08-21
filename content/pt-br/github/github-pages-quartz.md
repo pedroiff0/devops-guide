@@ -1,5 +1,6 @@
 ---
 title: "Digital Gardens com Quartz v4 & GitHub Pages"
+author: "Pedro Andrade & Everton"
 description: "Como transformar anotações Markdown em um segundo cérebro digital interativo com Quartz v4, grafo de conhecimento, busca instantânea e deploy no GitHub Pages."
 order: 60
 tags:

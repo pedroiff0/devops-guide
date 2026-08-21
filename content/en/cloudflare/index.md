@@ -1,5 +1,6 @@
 ---
-title: "Cloudflare Ecosystem: Edge, Serverless & Security"
+title: "Cloudflare"
+author: "Pedro Andrade & Everton"
 description: "Re-explained Cloudflare documentation hub: Workers V8 Isolates, Pages, Zero Trust, Tunnels, R2 Storage, and global Anycast DNS."
 order: 4
 tags:

@@ -1,5 +1,6 @@
 ---
-title: "Lovable: Desenvolvimento Full-Stack Acelerado por IA"
+title: "Lovable"
+author: "Pedro Andrade & Everton"
 description: "Hub de documentação reexplicada sobre Lovable: prototipagem rápida, arquitetura React + Vite + Tailwind, integração com Supabase e boas práticas de engenharia."
 order: 7
 tags:

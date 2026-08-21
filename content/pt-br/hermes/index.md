@@ -1,5 +1,6 @@
 ---
-title: "Hermes Agent: Automação Inteligente & Skills"
+title: "Hermes"
+author: "Pedro Andrade & Everton"
 description: "Hub de documentação sobre o ecossistema de agentes Hermes: autoria de skills reutilizáveis, gerenciamento de contexto, hooks de ciclo de vida e integração MCP."
 order: 6
 tags:

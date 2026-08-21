@@ -1,5 +1,6 @@
 ---
 title: "Productivity with GitHub CLI & APIs"
+author: "Pedro Andrade & Everton"
 description: "Comprehensive guide to terminal automation and productivity with GitHub CLI (gh), GitHub REST, and GraphQL APIs."
 order: 70
 tags:

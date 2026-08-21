@@ -1,5 +1,6 @@
 ---
 title: "Produtividade com GitHub CLI & APIs"
+author: "Pedro Andrade & Everton"
 description: "Guia completo de automação e produtividade com GitHub CLI (gh), consultas com GitHub REST e GraphQL APIs, e scripts utilitários para desenvolvedores."
 order: 70
 tags:

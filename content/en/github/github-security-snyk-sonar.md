@@ -1,5 +1,6 @@
 ---
 title: "Security & Code Quality: Snyk, SonarCloud & CodeQL"
+author: "Pedro Andrade & Everton"
 description: "Comprehensive guide to repository security: SAST integration with SonarCloud, dependency vulnerability scanning (SCA) with Snyk, Dependabot, and CodeQL."
 order: 50
 tags:

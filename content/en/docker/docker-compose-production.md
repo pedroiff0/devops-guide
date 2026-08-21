@@ -1,5 +1,6 @@
 ---
 title: "Production Orchestration with Docker Compose"
+author: "Pedro Andrade & Everton"
 description: "Architectural patterns for Docker Compose: isolated networks, persistent volumes, healthchecks, resource constraints, and graceful shutdowns."
 order: 30
 tags:

@@ -1,5 +1,6 @@
 ---
-title: "Claude & AI Engineering: Theory to Agents"
+title: "Claude"
+author: "Pedro Andrade & Everton"
 description: "Documentation hub on Anthropic Claude models: Structured Prompt Engineering, extended context window management, Claude Code CLI, and agent orchestration."
 order: 5
 tags:

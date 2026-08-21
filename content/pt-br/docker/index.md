@@ -1,5 +1,6 @@
 ---
-title: "Docker & Containers Hub"
+title: "Docker"
+author: "Pedro Andrade & Everton"
 description: "Hub central de documentações reexplicadas sobre Docker, Containerd, Multi-Stage Builds, Docker Compose e orquestração de containers."
 order: 20
 tags:

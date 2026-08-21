@@ -1,0 +1,22 @@
+{
+  "alwaysUpdateLinks": true,
+  "showUnsupportedFiles": true,
+  "promptDelete": false,
+  "readableLineLength": false,
+  "showLineNumber": true,
+  "showInlineTitle": false,
+  "attachmentFolderPath": "99 - Meta/attachments",
+  "newFileLocation": "current",
+  "newFileFolderPath": "06 - Notas",
+  "pdfExportSettings": {
+    "includeName": false,
+    "pageSize": "A4",
+    "landscape": false,
+    "margin": "0",
+    "downscalePercent": 70
+  },
+  "defaultViewMode": "source",
+  "propertiesInDocument": "visible",
+  "tabSize": 4,
+  "foldHeading": true
+}

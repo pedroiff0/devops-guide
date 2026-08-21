@@ -8,10 +8,11 @@ import ConditionalRender from "./ConditionalRender"
 import CustomFooter from "./CustomFooter"
 import LanguageToggle from "./LanguageToggle"
 import AuthorProfile from "./AuthorProfile"
+import NextPrev from "./NextPrev"
 
 export { componentRegistry, defineComponent } from "./registry"
 export { External } from "./external"
 export type { ComponentManifest, RegisteredComponent } from "./registry"
 export type { QuartzComponent, QuartzComponentConstructor, QuartzComponentProps } from "./types"
 
-export { Head, Spacer, DesktopOnly, MobileOnly, NotFound, Flex, ConditionalRender }
+export { Head, Spacer, DesktopOnly, MobileOnly, NotFound, Flex, ConditionalRender, NextPrev }

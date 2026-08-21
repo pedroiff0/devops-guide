@@ -1,5 +1,6 @@
 ---
 title: "Segurança de Código & Qualidade: Snyk, SonarCloud & CodeQL"
+author: "Pedro Andrade & Everton"
 description: "Guia completo de segurança em repositórios: integração de SAST com SonarCloud, análise de dependências (SCA) com Snyk, automação com Dependabot e CodeQL no GitHub Actions."
 order: 50
 tags:

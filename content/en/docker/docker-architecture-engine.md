@@ -1,5 +1,6 @@
 ---
 title: "Docker Engine Architecture & Internals"
+author: "Pedro Andrade & Everton"
 description: "How Docker works under the hood: containerd, runc, Linux Namespaces, Cgroups v2, OverlayFS, and process isolation."
 order: 10
 tags:

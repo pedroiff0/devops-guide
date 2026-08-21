@@ -1,5 +1,6 @@
 ---
-title: "OceanGate / OpenGate: Edge Gateways & Architecture"
+title: "OceanGate"
+author: "Pedro Andrade & Everton"
 description: "Documentation hub on edge architectures, high-throughput reverse proxies, API gateways, rate limiting, and microservice orchestration."
 order: 8
 tags:

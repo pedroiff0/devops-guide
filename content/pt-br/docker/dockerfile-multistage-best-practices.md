@@ -1,5 +1,6 @@
 ---
 title: "Padrões de Dockerfile Multi-Stage para Produção"
+author: "Pedro Andrade & Everton"
 description: "Construção de imagens Docker enxutas, seguras e ultrarrápidas utilizando Multi-Stage Builds, cache inteligente de camadas, BuildKit e usuários non-root."
 order: 20
 tags:

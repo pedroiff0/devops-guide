@@ -1,5 +1,6 @@
 ---
 title: "Orquestração de Produção com Docker Compose"
+author: "Pedro Andrade & Everton"
 description: "Padrões arquiteturais para Docker Compose: redes isoladas, volumes persistentes, healthchecks, limites de recursos e graceful shutdown."
 order: 30
 tags:

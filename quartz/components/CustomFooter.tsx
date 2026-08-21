@@ -6,43 +6,65 @@ const CustomFooter: QuartzComponent = ({ displayClass, fileData }: QuartzCompone
   const isEn = fileData.slug?.startsWith("en") ?? false
 
   const content = {
-    title: isEn ? "DevOps Guide & Docs Hub" : "Guia DevOps & Docs Hub",
-    builtWith: isEn ? "Built with" : "Construído com",
+    title: isEn ? "DevOps Guide & Second Brain" : "DevOps Guide & Segundo Cérebro",
+    maintainedBy: isEn ? "Curated by" : "Mantido por",
     and: isEn ? "and" : "e",
-    maintainedBy: isEn ? "Maintained by" : "Mantido por",
+    builtWith: isEn ? "Powered by" : "Construído com",
+    license: isEn ? "Open Source under MIT License" : "Código Aberto sob Licença MIT",
   }
 
   return (
     <footer
       class={classNames(displayClass, "custom-footer")}
-      style={{ marginTop: "2rem", textAlign: "center" }}
+      style={{
+        marginTop: "3rem",
+        padding: "1.5rem 0 2.5rem 0",
+        borderTop: "1px solid var(--lightgray)",
+        textAlign: "center",
+        fontSize: "0.88rem",
+        color: "var(--darkgray)",
+      }}
     >
-      <hr />
-      <p style={{ margin: "0.8rem 0" }}>
-        © {year}{" "}
-        <a href="https://devops.phrandrade.com" target="_blank">
-          <strong>{content.title}</strong>
-        </a>{" "}
-        · {content.maintainedBy}{" "}
-        <a href="https://github.com/pedroiff0" target="_blank">
+      <div style={{ marginBottom: "0.75rem", fontWeight: 500 }}>
+        <strong>{content.title}</strong> ·{" "}
+        <span>{content.maintainedBy} </span>
+        <a
+          href="https://github.com/pedroiff0"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ fontWeight: 600, color: "var(--secondary)" }}
+        >
           Pedro Andrade
         </a>{" "}
         {content.and}{" "}
-        <a href="https://github.com/evertonpje" target="_blank">
+        <a
+          href="https://github.com/evertonpje"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{ fontWeight: 600, color: "var(--secondary)" }}
+        >
           Everton
         </a>
-      </p>
-      <p style={{ margin: "0.4rem 0", fontSize: "0.85rem", opacity: 0.8 }}>
-        {content.builtWith}{" "}
-        <a href="https://quartz.jzhao.xyz/" target="_blank">
-          Quartz
-        </a>{" "}
-        {content.and}{" "}
-        <a href="https://github.com/pedroiff0/devops-guide" target="_blank">
-          GitHub Actions
+      </div>
+
+      <div style={{ fontSize: "0.8rem", opacity: 0.85, marginBottom: "0.5rem" }}>
+        <span>{content.builtWith} </span>
+        <a href="https://quartz.jzhao.xyz/" target="_blank" rel="noopener noreferrer">
+          Quartz v4
         </a>
-        .
-      </p>
+        {" & "}
+        <a href="https://github.com/pedroiff0/devops-guide" target="_blank" rel="noopener noreferrer">
+          GitHub Actions CI/CD
+        </a>
+        {" · "}
+        <a href="https://devops.phrandrade.com" target="_blank" rel="noopener noreferrer">
+          devops.phrandrade.com
+        </a>
+      </div>
+
+      <div style={{ fontSize: "0.75rem", opacity: 0.7 }}>
+        © {year} · {content.license}
+      </div>
     </footer>
   )
 }

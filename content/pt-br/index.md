@@ -1,5 +1,6 @@
 ---
 title: "Segundo Cérebro: Hub de Documentações Reexplicadas"
+author: "Pedro Andrade & Everton"
 description: "Base de conhecimento central e grafo interativo de documentações técnicas reexplicadas com clareza, comandos reais e arquitetura moderna."
 order: 1
 tags:

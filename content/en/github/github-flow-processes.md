@@ -1,5 +1,6 @@
 ---
 title: "Workflows: Issues, PRs & Governance"
+author: "Pedro Andrade & Everton"
 description: "Professional GitHub collaboration workflows: Issue templates, Pull Request anatomy, semantic labels, Code Review etiquette, and branch protection rules."
 order: 30
 tags:

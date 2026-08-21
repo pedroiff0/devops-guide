@@ -1,5 +1,6 @@
 ---
 title: "Mecânica Interna & Arquitetura do Docker Engine"
+author: "Pedro Andrade & Everton"
 description: "Como o Docker funciona sob o capô: containerd, runc, Linux Namespaces, Cgroups v2, OverlayFS e isolamento de processos."
 order: 10
 tags:

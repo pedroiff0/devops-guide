@@ -1,5 +1,6 @@
 ---
 title: "Conventional Commits & Semantic Commits"
+author: "Pedro Andrade & Everton"
 description: "Comprehensive guide on the Conventional Commits 1.0.0 specification, type taxonomy, scopes, breaking changes, SemVer mapping, and automated validation scripts."
 order: 20
 tags:

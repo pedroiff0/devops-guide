@@ -1,5 +1,6 @@
 ---
-title: "Claude & Engenharia de IA: Da Teoria aos Agentes"
+title: "Claude"
+author: "Pedro Andrade & Everton"
 description: "Hub de documentação sobre modelos Claude da Anthropic: Prompt Engineering estruturado, gestão de contexto longo, Claude Code CLI e orquestração de subagentes."
 order: 5
 tags:

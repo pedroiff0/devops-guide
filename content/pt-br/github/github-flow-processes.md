@@ -1,5 +1,6 @@
 ---
 title: "Processos de Trabalho: Issues, PRs & Governança"
+author: "Pedro Andrade & Everton"
 description: "Fluxos de trabalho profissionais no GitHub: templates de issues, anatomia de Pull Requests, etiquetas semânticas, code review e regras de proteção de branch."
 order: 30
 tags:

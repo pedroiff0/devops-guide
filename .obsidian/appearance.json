@@ -1,0 +1,21 @@
+{
+  "showViewHeader": true,
+  "accentColor": "",
+  "cssTheme": "Vanilla AMOLED",
+  "theme": "system",
+  "interfaceFontFamily": "",
+  "monospaceFontFamily": "PT Mono",
+  "baseFontSize": 16,
+  "baseFontSizeAction": true,
+  "translucency": false,
+  "enabledCssSnippets": [
+    "Colored Sidebar Items",
+    "CyanVoxel's General Tweaks",
+    "Daily Note Themes",
+    "Japanese Font Support",
+    "Minecraft",
+    "Notebook Backgrounds",
+    "Runescape"
+  ],
+  "showRibbon": true
+}

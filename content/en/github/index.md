@@ -1,5 +1,6 @@
 ---
-title: "GitHub & Git Ecosystem: Definitive Guide"
+title: "GitHub"
+author: "Pedro Andrade & Everton"
 description: "Comprehensive and structured overview of the GitHub ecosystem: from atomic version control to advanced CI/CD, governance, and software security."
 order: 2
 tags:
@@ -39,13 +40,17 @@ graph TD
 ---
 
 ### 1. ⚙️ [[en/github/git-essentials|Git Essentials & Internal Mechanics]]
-- The Git object tree: *Blobs, Trees, Commits, and Annotated Tags*.
+- Git object hierarchy: *Blobs, Trees, Commits, and Tags*.
 - The three areas: *Working Directory, Staging Area (Index), and HEAD*.
 - Branch management, Merge vs. Interactive Rebase strategies.
-- Temporal manipulation: `git stash`, `git cherry-pick`, `git reset` (soft, mixed, hard), and disaster recovery with `git reflog`.
-- Local Git hooks (`pre-commit`, `commit-msg`).
+- Temporal manipulation: `git stash`, `git cherry-pick`, `git reset` (soft, mixed, hard), and disaster recovery via `git reflog`.
 
-### 2. 📝 [[en/github/conventional-commits|Conventional Commits & Semantic Commits]]
+### 2. 🌳 [[en/github/git-submodules-subtrees|Git Submodules vs Git Subtrees: Nested Repositories]]
+- Managing mono-repos and decoupled external dependencies.
+- Pointer-based SHAs vs embedded tree merging.
+- Essential recursive cloning and upstream sync commands.
+
+### 3. 📝 [[en/github/conventional-commits|Conventional Commits & Semantic Messages]]
 - Official Conventional Commits 1.0.0 specification.
 - Full type taxonomy: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`.
 - Strict formatting rules for *Header (Type, Scope, Subject)*, *Body*, and *Footer*.

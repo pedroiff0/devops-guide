@@ -1,5 +1,6 @@
 ---
-title: "Hermes Agent: Autonomous Tooling & Skills"
+title: "Hermes"
+author: "Pedro Andrade & Everton"
 description: "Documentation hub on the Hermes agent ecosystem: modular SKILL.md authoring, progressive context disclosure, lifecycle hooks, and MCP tooling."
 order: 6
 tags:

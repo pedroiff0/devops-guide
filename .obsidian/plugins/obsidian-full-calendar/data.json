@@ -1,0 +1,16 @@
+{
+  "calendarSources": [
+    {
+      "type": "local",
+      "color": "hsl(258, 88%, 66%)",
+      "directory": "02 - Áreas/Acadêmico/IFF - Engenharia de Computação/05 - Periodo"
+    }
+  ],
+  "defaultCalendar": 0,
+  "firstDay": 0,
+  "initialView": {
+    "desktop": "listWeek",
+    "mobile": "listWeek"
+  },
+  "timeFormat24h": true
+}

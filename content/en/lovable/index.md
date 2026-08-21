@@ -1,5 +1,6 @@
 ---
-title: "Lovable: AI-Accelerated Full-Stack Engineering"
+title: "Lovable"
+author: "Pedro Andrade & Everton"
 description: "Re-explained documentation hub on Lovable: rapid prototyping, React + Vite + Tailwind architecture, Supabase PostgreSQL integration, and software patterns."
 order: 7
 tags:

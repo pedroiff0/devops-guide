@@ -1,5 +1,6 @@
 ---
 title: "GitHub Actions & Automated CI/CD"
+author: "Pedro Andrade & Everton"
 description: "In-depth guide on GitHub Actions: runner architecture, build matrices, secrets, dependency caching, reusable workflows, and continuous deployment to GitHub Pages."
 order: 40
 tags:

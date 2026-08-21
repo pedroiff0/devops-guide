@@ -3,11 +3,13 @@ import HeaderConstructor from "../Header"
 import LanguageToggleConstructor from "../LanguageToggle"
 import CustomFooterConstructor from "../CustomFooter"
 import CreatedDateConstructor from "../CreatedDate"
+import NextPrevConstructor from "../NextPrev"
 
 const Header = HeaderConstructor()
 const LanguageToggle = LanguageToggleConstructor()
 const CustomFooter = CustomFooterConstructor()
 const CreatedDate = CreatedDateConstructor()
+const NextPrev = NextPrevConstructor()
 
 /**
  * The default page frame — three-column layout with left sidebar, center
@@ -49,6 +51,7 @@ export const DefaultFrame: PageFrame = {
             <CreatedDate {...componentData} />
           </div>
           <Content {...componentData} />
+          <NextPrev {...componentData} />
           <hr />
           <div class="page-footer">
             {afterBody.map((BodyComponent) => (

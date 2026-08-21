@@ -1,5 +1,6 @@
 ---
-title: "OceanGate / OpenGate: Arquitetura de Borda & Gateways"
+title: "OceanGate"
+author: "Pedro Andrade & Everton"
 description: "Hub de documentação sobre arquiteturas de borda, proxies reversos de alto throughput, gateways de API e orquestração de microsserviços."
 order: 8
 tags:

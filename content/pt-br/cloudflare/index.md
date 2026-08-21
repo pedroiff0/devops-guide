@@ -1,5 +1,6 @@
 ---
-title: "Cloudflare Ecosystem: Borda, Serverless & Segurança"
+title: "Cloudflare"
+author: "Pedro Andrade & Everton"
 description: "Hub de documentação reexplicada do ecossistema Cloudflare: Workers V8 Isolates, Pages, Zero Trust, Tunnels, R2 Storage e DNS distribuído."
 order: 4
 tags:

@@ -216,8 +216,8 @@ plugins:
   - source: github:quartz-community/backlinks
     enabled: true
     layout:
-      position: right
-      priority: 50
+      position: afterBody
+      priority: 10
   - source: github:quartz-community/article-title
     enabled: true
     layout:

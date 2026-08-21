@@ -1,5 +1,6 @@
 ---
-title: "Ecossistema GitHub & Git: Guia Definitivo"
+title: "GitHub"
+author: "Pedro Andrade & Everton"
 description: "Visão geral completa e estruturada do ecossistema GitHub: do controle de versão atômico até CI/CD avançado, governança e segurança de software."
 order: 2
 tags:
@@ -42,10 +43,14 @@ graph TD
 - A árvore de objetos do Git: *Blobs, Trees, Commits e Tags*.
 - As três áreas: *Working Directory, Staging Area (Index) e HEAD*.
 - Gestão de Branches, estratégias de Merge vs. Rebase iterativo.
-- Manipulação temporal: `git stash`, `git cherry-pick`, `git reset` (soft, mixed, hard) e recuperação de desastres com `git reflog`.
-- Hooks locais de Git (`pre-commit`, `commit-msg`).
+- Manipulação temporal: `git stash`, `git cherry-pick`, `git reset` (soft, mixed, hard) e recuperação com `git reflog`.
 
-### 2. 📝 [[pt-br/github/conventional-commits|Conventional Commits & Commits Semânticos]]
+### 2. 🌳 [[pt-br/github/git-submodules-subtrees|Git Submodules vs Git Subtrees: Repositórios Aninhados]]
+- Gestão de mono-repos e dependências externas aninhadas.
+- Diferenças entre apontamento por SHA e mesclagem de árvore embutida.
+- Comandos essenciais de clonagem recursiva e sincronização com upstream.
+
+### 3. 📝 [[pt-br/github/conventional-commits|Conventional Commits & Commits Semânticos]]
 - Especificação oficial Conventional Commits 1.0.0.
 - Taxonomia completa de tipos: `feat`, `fix`, `docs`, `style`, `refactor`, `perf`, `test`, `build`, `ci`, `chore`, `revert`.
 - Regras estritas de formatação para *Header (Type, Scope, Subject)*, *Body* e *Footer*.
