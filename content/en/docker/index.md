@@ -1,54 +1,58 @@
 ---
-title: "Docker & Containers: Architecture & Practical Guide"
-description: "Re-explained Docker documentation hub: containerization, multi-stage Dockerfiles, Docker Compose, persistent storage, and high-throughput networking."
-order: 3
+title: "Docker & Containers Hub"
+description: "Central knowledge hub for in-depth re-explained documentation on Docker, Containerd, Multi-Stage Builds, Docker Compose, and container orchestration."
+order: 20
 tags:
   - docker
   - containers
   - devops
-  - infrastructure
+  - architecture
 ---
 
-# 🐳 Docker & Containers: Architecture & Practical Guide
+# 🐳 Docker & Containers Hub
 
 > [!NOTE]
-> **Module Status**: Actively expanding. This pillar covers transitioning monolithic applications into OCI containerized services, optimizing production images, and local multi-service orchestration.
+> Welcome to the **Docker & Containers Hub**. This pillar delivers re-explained, production-grade technical guides, breaking down low-level Linux kernel isolation primitives all the way to complete resilient multi-container architectures.
 
 ---
 
-## 🧭 Docker Ecosystem Overview
+## 🗺️ Module Navigation Map
 
 ```mermaid
 graph TD
-    Client["💻 Docker CLI / Compose"] --> Daemon["⚙️ Docker Daemon (dockerd)"]
-    Daemon --> Images["📦 Images (Layers / OCI)"]
-    Daemon --> Containers["🏃 Running Containers"]
-    Daemon --> Networks["🌐 Networks (bridge / overlay)"]
-    Daemon --> Volumes["💾 Volumes / Bind Mounts"]
-    Images --> Registry["☁️ Docker Hub / GitHub Container Registry (GHCR)"]
+    DockerHub["🐳 Docker & Containers Hub"]
+    DockerHub --> Arch["⚙️ 1. Engine Architecture & Internals"]
+    DockerHub --> MultiStage["📦 2. Production Multi-Stage Dockerfiles"]
+    DockerHub --> Compose["🐙 3. Production Docker Compose"]
+
+    Arch --> ArchDesc["Namespaces, Cgroups v2, Overlay2, and containerd"]
+    MultiStage --> MultiStageDesc["Layer optimization, cache hierarchy, BuildKit, non-root"]
+    Compose --> ComposeDesc["Isolated bridge networks, healthchecks, resource limits"]
 ```
 
 ---
 
-## 🗺️ Topics & Module Roadmap
+## 📚 Available In-Depth Guides
 
-1. **Docker Fundamentals**:
-   - Linux kernel primitives: *Namespaces*, *cgroups*, and *UnionFS*.
-   - Hypervisor Virtual Machines vs. OS-level Containerization.
-2. **Optimized Dockerfile Authoring**:
-   - Multi-stage builds reducing image footprints from ~1GB to <50MB.
-   - Layer caching strategies and non-root security (`USER appuser`).
-3. **Local Orchestration with Docker Compose**:
-   - Managing multi-container stacks, networks, volumes, `.env`, and healthchecks.
-4. **Networking & Volume Persistence**:
-   - Bridge, host, overlay networks and named volume lifecycle.
-5. **CI/CD Automation**:
-   - Automated image building and pushing to GHCR via [[en/github/github-actions-cicd|GitHub Actions]].
+1. [[en/docker/docker-architecture-engine|⚙️ Docker Engine Architecture & Internals]]
+   - The OCI runtime stack: `dockerd`, `containerd`, `containerd-shim`, and `runc`.
+   - Linux isolation primitives: Namespaces (`pid`, `net`, `mnt`, `ipc`, `user`) and Cgroups v2.
+   - Layered storage mechanics with `overlay2` and Copy-on-Write.
+
+2. [[en/docker/dockerfile-multistage-best-practices|📦 Production Multi-Stage Dockerfile Patterns]]
+   - Build vs runtime stage separation using Alpine and Distroless base images.
+   - Layer caching optimization strategies and `.dockerignore` discipline.
+   - Running as non-root system users.
+
+3. [[en/docker/docker-compose-production|🐙 Production Orchestration with Docker Compose]]
+   - Multi-tier network isolation (*frontend-net* vs *backend-net*).
+   - Robust `healthcheck` declarations and `depends_on` conditions.
+   - CPU and Memory resource enforcement.
 
 ---
 
-## 🔗 Second Brain Links
+## 🔗 Second Brain Connections
 
-- Automate container tests in [[en/github/github-actions-cicd|GitHub Actions & CI/CD]].
-- Scan Docker images for vulnerabilities with [[en/github/github-security-snyk-sonar|Security & Code Quality]].
-- Back to the central hub in [[en/index|Second Brain Docs Hub]].
+- [[en/github/github-actions-cicd|CI/CD with GitHub Actions: Building & Publishing Container Images]]
+- [[en/github/github-security-snyk-sonar|Container Security: Snyk & SonarCloud Scanning]]
+- [[en/cloudflare/index|Cloudflare Hub: Edge Containers & Cloudflare Tunnels]]
