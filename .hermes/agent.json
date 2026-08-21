@@ -1,0 +1,16 @@
+{
+  "name": "devops-guide-agent",
+  "version": "1.0.0",
+  "description": "Hermes Agent configuration for the DevOps Guide & Second Brain Documentation Hub",
+  "rules": [
+    "AGENTS.md",
+    "skills/README.md"
+  ],
+  "skills_path": "skills",
+  "default_model": "inherit",
+  "workflows": {
+    "verify": "npm run build && python3 scripts/check-i18n-mirror.py",
+    "serve": "npm run serve",
+    "validate_commits": "./scripts/validate-commit-msg.sh"
+  }
+}

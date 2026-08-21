@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json.schemastore.org/partial-claude-settings.json",
+  "name": "devops-guide",
+  "version": "1.0.0",
+  "description": "Second Brain & Re-explained Documentation Hub for DevOps and Cloud Native Tooling",
+  "commands": {
+    "build": "npm run build",
+    "serve": "npm run serve",
+    "lint": "python3 scripts/check-i18n-mirror.py && ./scripts/validate-commit-msg.sh",
+    "typecheck": "npm run check"
+  }
+}
