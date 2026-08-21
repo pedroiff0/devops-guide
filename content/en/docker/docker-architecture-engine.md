@@ -1,6 +1,7 @@
 ---
 title: "Docker Engine Architecture & Internals"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "How Docker works under the hood: containerd, runc, Linux Namespaces, Cgroups v2, OverlayFS, and process isolation."
 order: 10
 tags:
@@ -117,6 +118,15 @@ ls -l /proc/$CONTAINER_PID/ns/
 # Inspect Cgroups v2 resource boundaries
 cat /sys/fs/cgroup/system.slice/docker-*.scope/memory.max 2>/dev/null || cat /sys/fs/cgroup/memory/docker/$CONTAINER_PID/memory.limit_in_bytes 2>/dev/null
 ```
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Docker Engine Official Documentation](https://docs.docker.com/engine/) — Official architecture, CLI, and storage drivers.
+- 📦 [Open Container Initiative (OCI) Runtime Spec](https://github.com/opencontainers/runtime-spec) — Technical spec for runc and containerd.
+- 🐙 [Docker Compose Specification](https://docs.docker.com/compose/compose-file/) — Official compose.yaml standard.
+- 🐧 [Linux Kernel: Cgroups v2 & Namespaces](https://www.kernel.org/doc/Documentation/cgroup-v2.txt) — Official kernel documentation.
 
 ---
 

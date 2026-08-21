@@ -1052,8 +1052,90 @@ details.author-details[open] .author-summary {
   }
 }
 
+/* ==========================================================================
+   🟣 Next / Previous Topic Navigation Cards
+   ========================================================================== */
+.next-prev-nav {
+  display: grid !important;
+  grid-template-columns: 1fr 1fr !important;
+  gap: 1.25rem !important;
+  margin: 3rem 0 2rem 0 !important;
+  padding-top: 1.5rem !important;
+  border-top: 2px dashed var(--lightgray) !important;
+  width: 100% !important;
 
+  @media (max-width: 650px) {
+    grid-template-columns: 1fr !important;
+    gap: 0.75rem !important;
+  }
 
+  .nav-card {
+    display: flex !important;
+    flex-direction: column !important;
+    padding: 1.1rem 1.35rem !important;
+    border-radius: 12px !important;
+    background: var(--light) !important;
+    border: 1px solid var(--lightgray) !important;
+    text-decoration: none !important;
+    transition: all 0.22s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    box-shadow: 0 2px 8px rgba(124, 58, 237, 0.04) !important;
+    position: relative !important;
+    overflow: hidden !important;
 
+    &:hover {
+      border-color: var(--secondary) !important;
+      background: var(--lightgray) !important;
+      transform: translateY(-3px) !important;
+      box-shadow: 0 8px 20px rgba(124, 58, 237, 0.15) !important;
 
+      .nav-dir {
+        color: var(--secondary) !important;
+      }
+      .nav-title {
+        color: var(--secondary) !important;
+      }
+    }
 
+    &.prev-card {
+      text-align: left !important;
+    }
+
+    &.next-card {
+      text-align: right !important;
+      margin-left: auto !important;
+      width: 100% !important;
+    }
+
+    .nav-dir {
+      font-size: 0.78rem !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      color: var(--gray) !important;
+      font-weight: 700 !important;
+      margin-bottom: 0.35rem !important;
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.35rem !important;
+
+      .arrow {
+        font-size: 1.1rem !important;
+        line-height: 1 !important;
+      }
+    }
+
+    &.next-card .nav-dir {
+      justify-content: flex-end !important;
+    }
+
+    .nav-title {
+      font-size: 1.02rem !important;
+      color: var(--dark) !important;
+      font-weight: 600 !important;
+      line-height: 1.35 !important;
+    }
+  }
+
+  .nav-card-placeholder {
+    visibility: hidden !important;
+  }
+}

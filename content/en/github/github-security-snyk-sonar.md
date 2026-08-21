@@ -1,6 +1,7 @@
 ---
 title: "Security & Code Quality: Snyk, SonarCloud & CodeQL"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Comprehensive guide to repository security: SAST integration with SonarCloud, dependency vulnerability scanning (SCA) with Snyk, Dependabot, and CodeQL."
 order: 50
 tags:
@@ -78,6 +79,15 @@ snyk monitor
 # Test a local Docker image
 snyk container test my-app:latest
 ```
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Official Pro Git book and command manual.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Official guides on GitHub Actions, PRs, Security, and REST/GraphQL APIs.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/en/v1.0.0/) — Official specification.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Official SAST & SCA security docs.
 
 ---
 

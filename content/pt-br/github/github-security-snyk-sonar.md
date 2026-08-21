@@ -1,6 +1,7 @@
 ---
 title: "Segurança de Código & Qualidade: Snyk, SonarCloud & CodeQL"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Guia completo de segurança em repositórios: integração de SAST com SonarCloud, análise de dependências (SCA) com Snyk, automação com Dependabot e CodeQL no GitHub Actions."
 order: 50
 tags:
@@ -190,6 +191,15 @@ jobs:
       - uses: github/codeql-action/autobuild@v3
       - uses: github/codeql-action/analyze@v3
 ```
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Documentação e livro Pro Git oficial.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Guias oficiais do GitHub sobre Actions, PRs, Security e API.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/pt-br/v1.0.0/) — Especificação oficial em português.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Guias oficiais de SAST e segurança.
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Digital Gardens with Quartz v4 & GitHub Pages"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "How to transform Markdown vaults into an interactive second brain using Quartz v4, bidirectional graph networks, instant search, and GitHub Pages."
 order: 60
 tags:
@@ -63,6 +64,15 @@ npm run build
 # Typecheck TypeScript files
 npm run check
 ```
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Official Pro Git book and command manual.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Official guides on GitHub Actions, PRs, Security, and REST/GraphQL APIs.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/en/v1.0.0/) — Official specification.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Official SAST & SCA security docs.
 
 ---
 

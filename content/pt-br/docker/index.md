@@ -1,6 +1,7 @@
 ---
 title: "Docker"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Hub central de documentações reexplicadas sobre Docker, Containerd, Multi-Stage Builds, Docker Compose e orquestração de containers."
 order: 20
 tags:
@@ -49,6 +50,15 @@ graph TD
    - Topologia de rede dividida em redes públicas (*frontend-net*) e privadas (*backend-net*).
    - Definição de `healthcheck` robusto e condições `depends_on`.
    - Limites rígidos de consumo de CPU e Memória RAM.
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Docker Engine Official Documentation](https://docs.docker.com/engine/) — Arquitetura oficial, CLI e storage drivers.
+- 📦 [Open Container Initiative (OCI) Runtime Spec](https://github.com/opencontainers/runtime-spec) — Especificação técnica do runc e containerd.
+- 🐙 [Docker Compose Specification](https://docs.docker.com/compose/compose-file/) — Especificação oficial do compose.yaml.
+- 🐧 [Kernel Linux: Cgroups v2 & Namespaces](https://www.kernel.org/doc/Documentation/cgroup-v2.txt) — Documentação oficial do kernel.
 
 ---
 

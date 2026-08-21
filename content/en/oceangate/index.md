@@ -1,6 +1,7 @@
 ---
 title: "OceanGate"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Documentation hub on edge architectures, high-throughput reverse proxies, API gateways, rate limiting, and microservice orchestration."
 order: 8
 tags:
@@ -44,6 +45,13 @@ graph TD
    - Circuit breakers, exponential backoff retries, and automatic fallbacks.
 4. **Cloudflare & Edge Integration**:
    - Connecting with [[en/cloudflare/index|Cloudflare Workers & Tunnels]].
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌊 [OceanGate API Gateway Architecture](https://devops.phrandrade.com) — Edge routing and rate limiting specifications.
+- ⚡ [Redis Documentation](https://redis.io/docs/) — Distributed throttling algorithms and in-memory caching.
 
 ---
 

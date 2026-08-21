@@ -1,6 +1,7 @@
 ---
 title: "Hermes"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Documentation hub on the Hermes agent ecosystem: modular SKILL.md authoring, progressive context disclosure, lifecycle hooks, and MCP tooling."
 order: 6
 tags:
@@ -45,6 +46,13 @@ graph TD
    - Integrating filesystem, terminal, headless browser, and SQLite providers.
 5. **Repository Automation**:
    - Automated PR reviews, documentation synchronization, and continuous codebase maintenance.
+
+---
+
+## 📚 Official Documentation & References
+
+- 🦅 [Hermes Agent Official Repository](https://github.com/pedroiff0/devops-guide) — Architecture and skills manifest.
+- 🛠️ [Agentic Coding Protocols](https://modelcontextprotocol.io/) — Autonomous tool interaction specifications.
 
 ---
 

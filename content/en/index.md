@@ -1,6 +1,7 @@
 ---
 title: "Second Brain: Re-explained Docs Hub"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Central knowledge base and interactive graph of re-explained technical documentation with clarity, production-ready commands, and modern architecture."
 order: 1
 tags:

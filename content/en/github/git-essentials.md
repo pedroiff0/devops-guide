@@ -1,6 +1,7 @@
 ---
 title: "Git Essentials & Internal Mechanics"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "In-depth guide on Git internal mechanics, the object tree, branch strategies, interactive rebase, stash, cherry-pick, and disaster recovery with reflog."
 order: 10
 tags:
@@ -187,6 +188,15 @@ git bisect good # or git bisect bad
 # When done:
 git bisect reset
 ```
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Official Pro Git book and command manual.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Official guides on GitHub Actions, PRs, Security, and REST/GraphQL APIs.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/en/v1.0.0/) — Official specification.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Official SAST & SCA security docs.
 
 ---
 

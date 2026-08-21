@@ -1,6 +1,7 @@
 ---
 title: "Mecânica Interna & Arquitetura do Docker Engine"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Como o Docker funciona sob o capô: containerd, runc, Linux Namespaces, Cgroups v2, OverlayFS e isolamento de processos."
 order: 10
 tags:
@@ -117,6 +118,15 @@ ls -l /proc/$CONTAINER_PID/ns/
 # Inspecionar os limites de Cgroups v2 no Kernel Linux
 cat /sys/fs/cgroup/system.slice/docker-*.scope/memory.max 2>/dev/null || cat /sys/fs/cgroup/memory/docker/$CONTAINER_PID/memory.limit_in_bytes 2>/dev/null
 ```
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Docker Engine Official Documentation](https://docs.docker.com/engine/) — Arquitetura oficial, CLI e storage drivers.
+- 📦 [Open Container Initiative (OCI) Runtime Spec](https://github.com/opencontainers/runtime-spec) — Especificação técnica do runc e containerd.
+- 🐙 [Docker Compose Specification](https://docs.docker.com/compose/compose-file/) — Especificação oficial do compose.yaml.
+- 🐧 [Kernel Linux: Cgroups v2 & Namespaces](https://www.kernel.org/doc/Documentation/cgroup-v2.txt) — Documentação oficial do kernel.
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Claude"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Documentation hub on Anthropic Claude models: Structured Prompt Engineering, extended context window management, Claude Code CLI, and agent orchestration."
 order: 5
 tags:
@@ -44,6 +45,14 @@ graph TD
    - Terminal-native agent workflows for multi-file refactoring and test generation.
 5. **Tool Use & MCP (Model Context Protocol)**:
    - Connecting Claude models to external servers, filesystems, and databases.
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Anthropic Claude Documentation](https://docs.anthropic.com/) — Official Anthropic guides & Prompt Engineering.
+- 🤖 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) — Official protocol standard and SDKs.
+- 💻 [Claude Code CLI Documentation](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code) — Claude Code manual.
 
 ---
 

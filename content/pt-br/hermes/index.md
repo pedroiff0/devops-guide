@@ -1,6 +1,7 @@
 ---
 title: "Hermes"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Hub de documentação sobre o ecossistema de agentes Hermes: autoria de skills reutilizáveis, gerenciamento de contexto, hooks de ciclo de vida e integração MCP."
 order: 6
 tags:
@@ -46,6 +47,13 @@ graph TD
    - Conexão do agente com ferramentas de sistema de arquivos, executores de comandos, navegadores headless e bancos de dados locais.
 5. **Automação de Repositórios com Hermes**:
    - Criação de pipelines autônomos de revisão de código, geração de documentação e resolução de issues complexas.
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🦅 [Hermes Agent Official Repository](https://github.com/pedroiff0/devops-guide) — Arquitetura e manifesto de skills.
+- 🛠️ [Agentic Coding Protocols](https://modelcontextprotocol.io/) — Especificações de interação autônoma de ferramentas.
 
 ---
 

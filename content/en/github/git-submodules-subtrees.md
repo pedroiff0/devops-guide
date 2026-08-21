@@ -1,6 +1,7 @@
 ---
 title: "Git Submodules vs Git Subtrees"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Managing nested repositories and mono-repos: architectural differences, essential commands, CI/CD workflows, and when to use each approach."
 order: 25
 tags:
@@ -99,6 +100,15 @@ git subtree push --prefix=libs/auth https://github.com/user/auth-lib.git main
     submodules: recursive
     token: ${{ secrets.PAT_GITHUB }} # Required for private submodules
 ```
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Official Pro Git book and command manual.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Official guides on GitHub Actions, PRs, Security, and REST/GraphQL APIs.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/en/v1.0.0/) — Official specification.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Official SAST & SCA security docs.
 
 ---
 

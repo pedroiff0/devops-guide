@@ -1,6 +1,7 @@
 ---
 title: "GitHub Actions & CI/CD Automatizado"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Guia profundo sobre GitHub Actions: arquitetura de runners, matrizes de build, segredos, cache de dependências, reusable workflows e deploy contínuo no GitHub Pages."
 order: 40
 tags:
@@ -194,6 +195,15 @@ jobs:
 - **Secrets (`${{ secrets.NOME_SECRET }}`)**: Dados confidenciais (tokens de API, senhas, certificados). O GitHub mascara automaticamente esses valores nos logs de execução.
 - **Variables (`${{ vars.NOME_VAR }}`)**: Configurações não sensíveis (URLs de endpoints, identificadores de ambiente).
 - **Escopo Mínimo de Permissões**: Declare sempre o bloco `permissions:` no topo do workflow para aplicar o princípio do privilégio mínimo.
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Documentação e livro Pro Git oficial.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Guias oficiais do GitHub sobre Actions, PRs, Security e API.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/pt-br/v1.0.0/) — Especificação oficial em português.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Guias oficiais de SAST e segurança.
 
 ---
 

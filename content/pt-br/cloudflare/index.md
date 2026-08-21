@@ -1,6 +1,7 @@
 ---
 title: "Cloudflare"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Hub de documentação reexplicada do ecossistema Cloudflare: Workers V8 Isolates, Pages, Zero Trust, Tunnels, R2 Storage e DNS distribuído."
 order: 4
 tags:
@@ -49,6 +50,14 @@ graph TD
    - Exposição segura de serviços locais e portas internas para a web pública sem abrir portas no roteador ou configurar IP público estático.
 5. **Zero Trust & Access**:
    - Políticas de controle de acesso corporativo, autenticação com provedores OAuth2 e túneis VPN sem cliente.
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Cloudflare Developers Documentation](https://developers.cloudflare.com/) — Documentação oficial do ecossistema Cloudflare.
+- ⚡ [Cloudflare Workers & V8 Isolates](https://developers.cloudflare.com/workers/) — Arquitetura de execução na borda.
+- 🛡️ [Cloudflare Zero Trust & Tunnels](https://developers.cloudflare.com/cloudflare-one/) — Conectividade segura sem portas abertas.
 
 ---
 

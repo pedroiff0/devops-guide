@@ -2,22 +2,23 @@
 name: re-explained-authoring
 description: >-
   In-depth technical writing standard for authoring comprehensive, re-explained documentation notes
-  with real-world production configurations, architecture diagrams, command recipes, and strict
-  Portuguese/English 1:1 symmetry.
+  with real-world production configurations, beautiful icons, error-free Mermaid diagrams,
+  official documentation curation references, and strict Portuguese/English 1:1 symmetry.
 ---
 
 # ✍️ Skill: Escrita de Guias Reexplicados
 
-Esta skill detalha as diretrizes de redação técnica para transformar tópicos complexos em guias reexplicados de alto nível.
+Esta skill detalha as diretrizes de redação técnica para transformar tópicos complexos em guias reexplicados de alto nível para desenvolvedores e arquitetos.
 
 ---
 
-## 🎯 1. Princípios de Redação Técnica
+## 🎯 1. Princípios Fundamentais
 
-1. **Arquitetura Antes da Sintaxe**: Explique o funcionamento interno e o fluxo de dados com diagramas Mermaid antes de listar os comandos.
-2. **Elimine "Hello World"**: Use exemplos com arquiteturas reais (ex.: múltiplos ambientes, autenticação JWT, balanceamento de carga, Docker multi-stage).
-3. **Seção de Armadilhas & Erros Comuns**: Toda nota técnica deve alertar sobre as armadilhas mais frequentes encontradas em produção.
-4. **Espelhamento Bilíngue Rigoroso**: A nota deve ser escrita em Português (`content/pt-br/`) e traduzida com fidelidade para Inglês (`content/en/`) com nomes de arquivo idênticos.
+1. **Curadoria Oficial Baseada em Fatos**: Nada é inventado. Todo conteúdo é fundamentado em documentações oficiais autoritativas (ex.: Docker Docs, Git SCM, GitHub Docs, Cloudflare Docs, Node.js, Linux Kernel Docs).
+2. **Arquitetura Antes dos Comandos**: Explique o fluxo de dados e os blocos internos com diagramas Mermaid antes de listar sintaxes.
+3. **Sem Exemplos Simplistas**: Rejeitamos "Hello World" infantis. Apresente arquiteturas completas com múltiplos serviços, isolamento de rede, healthchecks e execução com usuários non-root.
+4. **Identidade Visual com Beautiful Icons**: Utilize ícones elegantes em todos os títulos, seções e destaques visuais.
+5. **Espelhamento Bilíngue Rigoroso**: Toda página criada em `content/pt-br/` deve ter sua réplica equivalente em `content/en/`.
 
 ---
 
@@ -25,7 +26,9 @@ Esta skill detalha as diretrizes de redação técnica para transformar tópicos
 
 ```markdown
 ---
-title: "Título Preciso do Tópico"
+title: "Título Conciso com Beautiful Icon"
+author: "Pedro Andrade & Everton"
+publish: true
 description: "Resumo executivo de 1 a 2 frases para pré-visualização e SEO."
 order: 10
 tags:
@@ -33,10 +36,10 @@ tags:
   - tag-secundaria
 ---
 
-# 🚀 Título Principal
+# 🚀 Título Principal da Tecnologia
 
 > [!NOTE]
-> Resumo conceitual em destaque explicando a relevância técnica deste tópico.
+> Resumo conceitual em destaque explicando a relevância técnica e o problema que este componente resolve.
 
 ---
 
@@ -44,18 +47,18 @@ tags:
 
 ```mermaid
 graph TD
-    A["Origem"] --> B["Processamento"]
-    B --> C["Destino"]
+    A["💻 Origem da Requisição"] --> B["⚡ Camada de Processamento"]
+    B --> C["🗄️ Persistência / Destino"]
 ```
 
-Explicação clara de como o componente se comporta sob o capô.
+Explicação detalhada do comportamento sob o capô.
 
 ---
 
-## 💻 2. Guia de Comandos & Configuração de Produção
+## 💻 2. Guia Prático & Configuração de Produção
 
 ```yaml
-# Exemplo de configuração comentada pronta para uso
+# Configuração real comentada pronta para ambiente de produção
 version: "3.8"
 services:
   app:
@@ -67,8 +70,15 @@ services:
 
 ## ⚠️ 3. Armadilhas Comuns & Como Evitar
 
-- **Armadilha 1**: Descrição do erro e como corrigir.
-- **Armadilha 2**: Impacto de performance e recomendação.
+- **Armadilha 1**: Descrição do erro frequente e a solução preventiva.
+- **Armadilha 2**: Impacto de segurança/performance e boa prática recomendada.
+
+---
+
+## 📚 4. Documentação Original & Fontes de Referência
+
+- 🌐 [Documentação Oficial](https://...) — Referência autoritativa da ferramenta.
+- 📦 [Repositório / Especificação](https://...) — Código-fonte e padrões abertos.
 
 ---
 
@@ -80,10 +90,10 @@ services:
 
 ---
 
-## 🔍 Checklist de Redação
+## 🔍 Checklist de Validação do Conteúdo
 
-- [ ] A nota possui frontmatter com `title`, `description`, `order` e `tags`?
-- [ ] Há pelo menos um diagrama Mermaid ilustrando o conceito?
-- [ ] Os blocos de código possuem linguagem declarada e comentários explicativos?
-- [ ] A versão espelhada em inglês foi criada em `content/en/`?
-- [ ] A nota foi referenciada no `index.md` pai?
+- [ ] A nota possui frontmatter com `title`, `author`, `publish: true`, `description`, `order` e `tags`?
+- [ ] Possui beautiful icons no título e nos subtópicos?
+- [ ] O diagrama Mermaid utiliza aspas duplas em todos os nós?
+- [ ] Contém a seção `## 📚 Documentação Original & Fontes de Referência` com links oficiais?
+- [ ] A versão espelhada em inglês foi criada em `content/en/` com o mesmo slug?

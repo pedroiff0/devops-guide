@@ -1,6 +1,7 @@
 ---
 title: "OceanGate"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Hub de documentação sobre arquiteturas de borda, proxies reversos de alto throughput, gateways de API e orquestração de microsserviços."
 order: 8
 tags:
@@ -46,6 +47,13 @@ graph TD
 4. **Integração com Borda & Nuvem**:
    - Conexão com [[pt-br/cloudflare/index|Cloudflare Workers & Tunnels]].
    - Monitoramento de métricas em tempo real com Prometheus e Grafana.
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌊 [OceanGate API Gateway Architecture](https://devops.phrandrade.com) — Especificação de roteamento de borda e rate limiting.
+- ⚡ [Redis Documentation](https://redis.io/docs/) — Algoritmos de controle de vazão e estruturas de dados em memória.
 
 ---
 

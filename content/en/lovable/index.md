@@ -1,6 +1,7 @@
 ---
 title: "Lovable"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Re-explained documentation hub on Lovable: rapid prototyping, React + Vite + Tailwind architecture, Supabase PostgreSQL integration, and software patterns."
 order: 7
 tags:
@@ -43,6 +44,13 @@ graph LR
    - Continuous 2-way syncing between Lovable and your Git repository.
 4. **Best Practices for AI-Generated Code**:
    - Modular prompt design and architectural specification before UI generation.
+
+---
+
+## 📚 Official Documentation & References
+
+- 💖 [Lovable Documentation](https://docs.lovable.dev/) — AI-accelerated fullstack development platform.
+- ⚡ [Supabase Official Docs](https://supabase.com/docs) — PostgreSQL, Auth, and Edge Functions documentation.
 
 ---
 

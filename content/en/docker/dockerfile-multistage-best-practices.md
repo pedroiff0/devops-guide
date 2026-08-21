@@ -1,6 +1,7 @@
 ---
 title: "Production Multi-Stage Dockerfile Patterns"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Building lightweight, secure, and blazingly fast Docker images using Multi-Stage Builds, smart layer caching, BuildKit, and non-root users."
 order: 20
 tags:
@@ -126,6 +127,15 @@ Enable parallel stage execution and secret mounts:
 ```bash
 DOCKER_BUILDKIT=1 docker build -t my-app:prod .
 ```
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Docker Engine Official Documentation](https://docs.docker.com/engine/) — Official architecture, CLI, and storage drivers.
+- 📦 [Open Container Initiative (OCI) Runtime Spec](https://github.com/opencontainers/runtime-spec) — Technical spec for runc and containerd.
+- 🐙 [Docker Compose Specification](https://docs.docker.com/compose/compose-file/) — Official compose.yaml standard.
+- 🐧 [Linux Kernel: Cgroups v2 & Namespaces](https://www.kernel.org/doc/Documentation/cgroup-v2.txt) — Official kernel documentation.
 
 ---
 

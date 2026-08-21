@@ -1,6 +1,7 @@
 ---
 title: "Productivity with GitHub CLI & APIs"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Comprehensive guide to terminal automation and productivity with GitHub CLI (gh), GitHub REST, and GraphQL APIs."
 order: 70
 tags:
@@ -107,6 +108,15 @@ query {
 }
 '
 ```
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Official Pro Git book and command manual.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Official guides on GitHub Actions, PRs, Security, and REST/GraphQL APIs.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/en/v1.0.0/) — Official specification.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Official SAST & SCA security docs.
 
 ---
 

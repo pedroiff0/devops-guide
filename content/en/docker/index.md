@@ -1,6 +1,7 @@
 ---
 title: "Docker"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Central knowledge hub for in-depth re-explained documentation on Docker, Containerd, Multi-Stage Builds, Docker Compose, and container orchestration."
 order: 20
 tags:
@@ -49,6 +50,15 @@ graph TD
    - Multi-tier network isolation (*frontend-net* vs *backend-net*).
    - Robust `healthcheck` declarations and `depends_on` conditions.
    - CPU and Memory resource enforcement.
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Docker Engine Official Documentation](https://docs.docker.com/engine/) — Official architecture, CLI, and storage drivers.
+- 📦 [Open Container Initiative (OCI) Runtime Spec](https://github.com/opencontainers/runtime-spec) — Technical spec for runc and containerd.
+- 🐙 [Docker Compose Specification](https://docs.docker.com/compose/compose-file/) — Official compose.yaml standard.
+- 🐧 [Linux Kernel: Cgroups v2 & Namespaces](https://www.kernel.org/doc/Documentation/cgroup-v2.txt) — Official kernel documentation.
 
 ---
 

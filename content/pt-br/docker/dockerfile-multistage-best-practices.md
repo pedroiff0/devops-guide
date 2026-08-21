@@ -1,6 +1,7 @@
 ---
 title: "Padrões de Dockerfile Multi-Stage para Produção"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Construção de imagens Docker enxutas, seguras e ultrarrápidas utilizando Multi-Stage Builds, cache inteligente de camadas, BuildKit e usuários non-root."
 order: 20
 tags:
@@ -128,6 +129,15 @@ O BuildKit permite compilação paralela de estágios independentes e montagem d
 # Executar build com BuildKit e cache de montagem
 DOCKER_BUILDKIT=1 docker build -t minha-app:prod .
 ```
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Docker Engine Official Documentation](https://docs.docker.com/engine/) — Arquitetura oficial, CLI e storage drivers.
+- 📦 [Open Container Initiative (OCI) Runtime Spec](https://github.com/opencontainers/runtime-spec) — Especificação técnica do runc e containerd.
+- 🐙 [Docker Compose Specification](https://docs.docker.com/compose/compose-file/) — Especificação oficial do compose.yaml.
+- 🐧 [Kernel Linux: Cgroups v2 & Namespaces](https://www.kernel.org/doc/Documentation/cgroup-v2.txt) — Documentação oficial do kernel.
 
 ---
 

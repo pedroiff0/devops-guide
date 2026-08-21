@@ -1,6 +1,7 @@
 ---
 title: "Processos de Trabalho: Issues, PRs & Governança"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Fluxos de trabalho profissionais no GitHub: templates de issues, anatomia de Pull Requests, etiquetas semânticas, code review e regras de proteção de branch."
 order: 30
 tags:
@@ -94,6 +95,15 @@ Resolve lentidão reportada na issue #45 e inconsistências de timezone no relat
 - [x] Documentação atualizada (se aplicável)
 - [x] Conventional Commits seguidos em todos os commits
 - [x] Sem warnings ou dependências vulneráveis
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Documentação e livro Pro Git oficial.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Guias oficiais do GitHub sobre Actions, PRs, Security e API.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/pt-br/v1.0.0/) — Especificação oficial em português.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Guias oficiais de SAST e segurança.
+
+---
 
 ## 🔗 Issues Relacionadas
 Closes #45

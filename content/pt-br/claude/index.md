@@ -1,6 +1,7 @@
 ---
 title: "Claude"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Hub de documentação sobre modelos Claude da Anthropic: Prompt Engineering estruturado, gestão de contexto longo, Claude Code CLI e orquestração de subagentes."
 order: 5
 tags:
@@ -47,6 +48,14 @@ graph TD
    - Utilização da ferramenta de linha de comando da Anthropic para refatorações profundas, criação de testes e navegação em repositórios.
 5. **Tool Use & Protocolo MCP (Model Context Protocol)**:
    - Como conectar o Claude a servidores externos de dados, bancos SQL, ferramentas de terminal e navegadores.
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Anthropic Claude Documentation](https://docs.anthropic.com/) — Documentação oficial da Anthropic e Prompt Engineering.
+- 🤖 [Model Context Protocol (MCP)](https://modelcontextprotocol.io/) — Especificação oficial e SDKs do protocolo MCP.
+- 💻 [Claude Code CLI Documentation](https://docs.anthropic.com/en/docs/agents-and-tools/claude-code) — Guia do Claude Code.
 
 ---
 

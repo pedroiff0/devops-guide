@@ -1,6 +1,7 @@
 ---
 title: "Orquestração de Produção com Docker Compose"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Padrões arquiteturais para Docker Compose: redes isoladas, volumes persistentes, healthchecks, limites de recursos e graceful shutdown."
 order: 30
 tags:
@@ -171,6 +172,15 @@ docker compose stop
 # Destruir a stack mantendo os volumes de dados
 docker compose down
 ```
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Docker Engine Official Documentation](https://docs.docker.com/engine/) — Arquitetura oficial, CLI e storage drivers.
+- 📦 [Open Container Initiative (OCI) Runtime Spec](https://github.com/opencontainers/runtime-spec) — Especificação técnica do runc e containerd.
+- 🐙 [Docker Compose Specification](https://docs.docker.com/compose/compose-file/) — Especificação oficial do compose.yaml.
+- 🐧 [Kernel Linux: Cgroups v2 & Namespaces](https://www.kernel.org/doc/Documentation/cgroup-v2.txt) — Documentação oficial do kernel.
 
 ---
 

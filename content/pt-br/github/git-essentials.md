@@ -1,6 +1,7 @@
 ---
 title: "Fundamentos & Mecânica Interna do Git"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Guia detalhado sobre o funcionamento interno do Git, árvore de objetos, estratégias de branch, rebase interativo, stash, cherry-pick e recuperação de dados com reflog."
 order: 10
 tags:
@@ -187,6 +188,15 @@ git bisect good # ou git bisect bad
 # Ao terminar:
 git bisect reset
 ```
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Documentação e livro Pro Git oficial.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Guias oficiais do GitHub sobre Actions, PRs, Security e API.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/pt-br/v1.0.0/) — Especificação oficial em português.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Guias oficiais de SAST e segurança.
 
 ---
 

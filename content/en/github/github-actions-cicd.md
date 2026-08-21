@@ -1,6 +1,7 @@
 ---
 title: "GitHub Actions & Automated CI/CD"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "In-depth guide on GitHub Actions: runner architecture, build matrices, secrets, dependency caching, reusable workflows, and continuous deployment to GitHub Pages."
 order: 40
 tags:
@@ -104,6 +105,15 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 ```
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Official Pro Git book and command manual.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Official guides on GitHub Actions, PRs, Security, and REST/GraphQL APIs.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/en/v1.0.0/) — Official specification.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Official SAST & SCA security docs.
 
 ---
 

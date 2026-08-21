@@ -1,6 +1,7 @@
 ---
 title: "Conventional Commits & Commits Semânticos"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Guia completo da especificação Conventional Commits 1.0.0, taxonomia de tipos, escopos, breaking changes, integração com SemVer e scripts de validação."
 order: 20
 tags:
@@ -172,6 +173,15 @@ jobs:
         run: |
           ./scripts/validate-commit-msg.sh ${{ github.event.pull_request.base.sha }}..${{ github.event.pull_request.head.sha }}
 ```
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Documentação e livro Pro Git oficial.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Guias oficiais do GitHub sobre Actions, PRs, Security e API.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/pt-br/v1.0.0/) — Especificação oficial em português.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Guias oficiais de SAST e segurança.
 
 ---
 

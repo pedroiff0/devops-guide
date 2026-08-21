@@ -1,6 +1,7 @@
 ---
 title: "Digital Gardens com Quartz v4 & GitHub Pages"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Como transformar anotações Markdown em um segundo cérebro digital interativo com Quartz v4, grafo de conhecimento, busca instantânea e deploy no GitHub Pages."
 order: 60
 tags:
@@ -138,6 +139,15 @@ npm run build
 # Validar tipos TypeScript
 npm run check
 ```
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Documentação e livro Pro Git oficial.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Guias oficiais do GitHub sobre Actions, PRs, Security e API.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/pt-br/v1.0.0/) — Especificação oficial em português.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Guias oficiais de SAST e segurança.
 
 ---
 

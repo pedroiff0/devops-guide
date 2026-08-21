@@ -1,96 +1,108 @@
 ---
 name: doc-authoring
 description: >-
-  Standard operating procedure for authoring high-quality, re-explained documentation notes
-  in this repository, covering YAML frontmatter schemas, visual callouts, Mermaid diagrams,
-  production-ready code snippets, and mandatory Portuguese/English mirroring.
+  Standard operating procedure for authoring high-quality, re-explained documentation notes,
+  enforcing frontmatter schema (publish, author, order, tags), beautiful icons, error-free Mermaid diagrams,
+  official documentation curation references, and strict bilingual PT-BR / EN-US symmetry.
 ---
 
-# ✍️ Skill: Autoria de Documentações Reexplicadas
+# ✍️ Skill: Padrões de Autoria de Documentação Reexplicada
 
-Esta skill orienta a criação e edição de notas de documentação no repositório **Guia GitHub & Segundo Cérebro**.
-
----
-
-## 🎯 Princípios Fundamentais
-
-1. **Reexplicação Prática e Arquitetural**: Não apenas copie a documentação oficial. Reexplique os conceitos com base em princípios de engenharia de software, fluxos de dados, vantagens e desvantagens.
-2. **Espelhamento Bilíngue Obrigatório**: Qualquer nova página criada em `content/pt-br/` DEVE ter sua contraparte equivalente em `content/en/` com o mesmo slug relativo.
-3. **Densidade de Conexões (Grafo)**: Inclua links conceituais bidirecionais (`[[caminho/slug|Título]]`) no corpo da nota e no rodapé.
-4. **Comandos Prontos para Produção**: Todos os blocos de código devem ser executáveis e incluir comentários explicativos.
+Esta skill define as diretrizes estritas de formatação, metadados, recursos visuais e curadoria técnica para todas as notas deste repositório.
 
 ---
 
-## 📋 Schema Padrão de Frontmatter YAML
+## 📜 1. Frontmatter Schema Obrigatório
 
-Toda nota em `content/**/*.md` DEVE iniciar com o seguinte bloco:
+Toda nota em `content/**/*.md` **DEVE** iniciar com o seguinte cabeçalho YAML:
 
 ```yaml
 ---
-title: "Título Claro e Conciso"
-description: "Descrição concisa (1-2 frases) para metadados SEO, pré-visualizações de links e cards do Quartz."
-order: 10 # Inteiro para ordenação no Explorer da barra lateral (10, 20, 30...)
+title: "Título Conciso com Beautiful Icon (Ex: 🐳 Docker Engine)"
+author: "Pedro Andrade & Everton"
+publish: true
+ai_assisted: true # Opcional: true se co-escrito com agentes de IA
+description: "Resumo executivo de alto valor em 1 a 2 frases para SEO e cards de compartilhamento."
+order: 10 # Inteiro para ordenação na barra lateral (10, 20, 30...)
 tags:
-  - topico-principal
-  - tecnologia
-  - categoria
+  - tag-primaria
+  - tag-secundaria
 ---
 ```
 
+> [!NOTE]
+> - `publish: true`: Garante que a nota seja processada e indexada no grafo.
+> - `author`: Atribui o crédito formal de curadoria e autoria da nota.
+> - `ai_assisted: true`: Sinaliza que o conteúdo teve suporte de agentes de IA na curadoria e estruturação.
+> - **Segurança & Licença Livre**: **NUNCA** inclua senhas, credenciais, tokens privados ou dados sensíveis. Todo o código é aberto e livre sob a licença MIT.
+
 ---
 
-## 🎨 Elementos Visuais e Callouts Suportados
+## 🤖 2. Seção de Transparência: Conteúdo Escrito / Assistido por IA
 
-### 1. GitHub-Flavored Callouts / Alerts:
+Caso o conteúdo seja produzido ou co-escrito com o auxílio de agentes de IA (Antigravity, Claude Code, Hermes, Cursor), inclua a flag no frontmatter e o callout de transparência técnica:
+
 ```markdown
 > [!NOTE]
-> Informações contextuais, visões conceituais ou detalhes arquiteturais.
-
-> [!TIP]
-> Dicas práticas de produtividade, atalhos e recomendações recomendadas.
-
-> [!IMPORTANT]
-> Requisitos mandatórios e passos essenciais para o funcionamento.
-
-> [!WARNING]
-> Alertas de incompatibilidade, riscos de performance ou breaking changes.
-
-> [!CAUTION]
-> Ações destrutivas com risco de perda de dados ou exposição de segredos.
+> 🤖 **Curadoria & Co-criação Assistida por IA**
+> Este documento foi estruturado e co-escrito com o auxílio de agentes de IA avançados sob supervisão técnica humana, com validação estrita contra a documentação oficial da tecnologia.
 ```
 
 ---
 
-### 2. Diagramas Mermaid:
-Sempre use blocos de código ````mermaid```` para ilustrar fluxos, grafos de decisão e interações de componentes:
+## 🎨 3. Uso de Beautiful Icons em Todo Lugar
 
-````markdown
+Para manter uma interface visualmente rica e de rápida leitura cognitiva:
+- **Títulos e Cabeçalhos**: Sempre inclua um ícone expressivo no título `H1` e nas seções principais `H2` (ex.: `## 🏗️ 1. Arquitetura`, `## 💻 2. Guia Prático`, `## ⚠️ 3. Armadilhas Comuns`).
+- **Callouts**: Utilize alertas com ícones de destaque (`[!NOTE]`, `[!TIP]`, `[!IMPORTANT]`, `[!WARNING]`, `[!CAUTION]`).
+- **Listas & Tabelas**: Utilize badges e ícones de status (`🟢 Concluído`, `🟡 Em Progresso`, `⚡ Rápido`, `🔒 Seguro`).
+
+---
+
+## 📊 4. Regras de Ouro para Diagramas Mermaid à Prova de Falhas
+
+Para evitar quebras de renderização no Quartz e garantir diagramas limpos:
+
 ```mermaid
 graph TD
-    A["Origem"] --> B["Processamento"]
-    B --> C["Destino"]
+    A["💻 Cliente (CLI / Web)"] -->|HTTPS / REST| B["🛡️ API Gateway (OceanGate)"]
+    B -->|Proxy Interno| C["🚀 Microsserviço de Aplicação"]
+    C -->|TCP 5432| D[("🗄️ PostgreSQL Database")]
 ```
-````
+
+### Diretrizes Estruturais:
+1. **Sempre Use Aspas Duplas nos Labels**: Qualquer texto com espaços, parênteses, emojis ou caracteres especiais **DEVE** estar entre aspas duplas dentro dos colchetes:
+   - ✅ Correto: `NodeA["🐳 Docker Daemon (dockerd)"]`
+   - ❌ Errado: `NodeA[🐳 Docker Daemon (dockerd)]`
+2. **Quebras de Linha em Labels**: Use `<br>` explicitamente dentro das aspas: `NodeB["Linha 1<br>Linha 2"]`.
+3. **Direção Explícita**: Declare `graph TD` (cima para baixo) ou `graph LR` (esquerda para direita).
+4. **Subgraphs Delimitados**: Sempre feche `subgraph` com `end`.
+5. **Tipos de Diagramas Recomendados**:
+   - `graph TD` / `graph LR`: Arquiteturas, topologias e pipelines.
+   - `sequenceDiagram`: Fluxos temporais de requisições e autenticações.
+   - `stateDiagram-v2`: Ciclos de vida de containers, pods e estados de transição.
 
 ---
 
-### 3. Links Bidirecionais para o Grafo:
-- Em `pt-br/`: `[[pt-br/github/git-essentials|Fundamentos do Git]]`
-- Em `en/`: `[[en/github/git-essentials|Git Essentials]]`
+## 📚 5. Seção Mandatória: Documentação Original & Fontes Oficiais
+
+> [!IMPORTANT]
+> **Princípio da Não-Invenção**: Nada neste repositório é inventado. Todo o conteúdo resulta de uma curadoria aprofundada de documentações oficiais, especificações OCI, RFCs ou referências de engenharia de software reais.
+
+Toda nota técnica reexplicada **DEVE** incluir a seção final antes dos backlinks:
+
+```markdown
+## 📚 Documentação Original & Fontes de Referência
+
+- 🌐 [Documentação Oficial do Docker Engine](https://docs.docker.com/engine/) — Visão oficial da arquitetura e CLI.
+- 📦 [Open Container Initiative (OCI) Runtime Spec](https://github.com/opencontainers/runtime-spec) — Especificação técnica do runc e containerd.
+- 🐧 [Kernel Linux: Control Groups v2](https://www.kernel.org/doc/Documentation/cgroup-v2.txt) — Documentação oficial do kernel sobre cgroups.
+```
 
 ---
 
-## 🔄 Procedimento Passo a Passo de Criação
+## 🔗 6. Conexões do Segundo Cérebro (Wikilinks)
 
-1. **Determinar o Módulo**: Identifique a pasta pai em `content/pt-br/<modulo>/` e `content/en/<modulo>/`.
-2. **Definir o Slug**: Escolha um nome em kebab-case claro (ex.: `git-essentials.md`).
-3. **Escrever a versão PT-BR**: Desenvolva o conteúdo em português com frontmatter completo, diagramas e callouts.
-4. **Escrever a versão EN-US**: Crie a versão espelhada em inglês com o mesmo nome de arquivo.
-5. **Verificar a Compilação**:
-   ```bash
-   npx quartz build
-   ```
-6. **Verificar a Navegação Local**:
-   ```bash
-   npm run serve
-   ```
+Utilize wikilinks para alimentar o grafo D3 interativo:
+- Em `content/pt-br/`: `[[pt-br/github/git-essentials|Fundamentos do Git]]`
+- Em `content/en/`: `[[en/github/git-essentials|Git Essentials]]`

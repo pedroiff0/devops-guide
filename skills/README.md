@@ -19,6 +19,7 @@
 | **Git Flow & Commits** | [`skills/git-flow-conventional-commits/SKILL.md`](./git-flow-conventional-commits/SKILL.md) | Padrão Conventional Commits 1.0.0, branches, PRs e scripts de validação. |
 | **CI/CD & GitHub Pages** | [`skills/ci-cd-github-pages/SKILL.md`](./ci-cd-github-pages/SKILL.md) | Manutenção de workflows do GitHub Actions e deploy contínuo no Pages / CNAME. |
 | **Doc Engine Scaffolding**| [`skills/re-explained-doc-engine/SKILL.md`](./re-explained-doc-engine/SKILL.md) | Metodologia para expansão gradual de novos pilares tecnológicos. |
+| **GitHub Pipeline & Subagents** | [`skills/github-pipeline/SKILL.md`](./github-pipeline/SKILL.md) | Orquestração multiagente (Orchestrator vs Subagents), delegação com `invoke_subagent` e revisão de PR. |
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "GitHub"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Comprehensive and structured overview of the GitHub ecosystem: from atomic version control to advanced CI/CD, governance, and software security."
 order: 2
 tags:
@@ -91,3 +92,12 @@ graph TD
 
 > [!TIP]
 > **Start from the basics**: If you want to master the workflow from the ground up, begin with [[en/github/git-essentials|Git Essentials]] and advance sequentially through the modules.
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Official Pro Git book and command manual.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Official guides on GitHub Actions, PRs, Security, and REST/GraphQL APIs.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/en/v1.0.0/) — Official specification.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Official SAST & SCA security docs.

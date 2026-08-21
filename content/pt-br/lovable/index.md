@@ -1,6 +1,7 @@
 ---
 title: "Lovable"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Hub de documentação reexplicada sobre Lovable: prototipagem rápida, arquitetura React + Vite + Tailwind, integração com Supabase e boas práticas de engenharia."
 order: 7
 tags:
@@ -44,6 +45,13 @@ graph LR
 4. **Boas Práticas para Evitar Alucinações de Código**:
    - Estruturação de prompts incrementais e modulares.
    - Criação de especificações arquiteturais claras antes da geração de telas.
+
+---
+
+## 📚 Documentação Original & Fontes de Referência
+
+- 💖 [Lovable Documentation](https://docs.lovable.dev/) — Plataforma de desenvolvimento fullstack acelerado com IA.
+- ⚡ [Supabase Official Docs](https://supabase.com/docs) — Documentação de PostgreSQL, Auth e Edge Functions.
 
 ---
 

@@ -1,6 +1,7 @@
 ---
 title: "Workflows: Issues, PRs & Governance"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Professional GitHub collaboration workflows: Issue templates, Pull Request anatomy, semantic labels, Code Review etiquette, and branch protection rules."
 order: 30
 tags:
@@ -94,6 +95,15 @@ Resolves performance degradation reported in issue #45 and financial report time
 - [x] Documentation updated
 - [x] Conventional Commits adhered to
 - [x] No security warnings or vulnerable packages
+
+## 📚 Official Documentation & References
+
+- 🌐 [Git SCM Official Documentation](https://git-scm.com/doc) — Official Pro Git book and command manual.
+- 🐙 [GitHub Docs](https://docs.github.com/) — Official guides on GitHub Actions, PRs, Security, and REST/GraphQL APIs.
+- 📦 [Conventional Commits 1.0.0 Specification](https://www.conventionalcommits.org/en/v1.0.0/) — Official specification.
+- 🛡️ [SonarCloud Documentation](https://docs.sonarcloud.io/) & [Snyk Docs](https://docs.snyk.io/) — Official SAST & SCA security docs.
+
+---
 
 ## 🔗 Related Issues
 Closes #45

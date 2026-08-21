@@ -1,6 +1,7 @@
 ---
 title: "Cloudflare"
 author: "Pedro Andrade & Everton"
+publish: true
 description: "Re-explained Cloudflare documentation hub: Workers V8 Isolates, Pages, Zero Trust, Tunnels, R2 Storage, and global Anycast DNS."
 order: 4
 tags:
@@ -45,6 +46,14 @@ graph TD
    - **Cloudflare D1**: Serverless relational SQLite at the edge.
 4. **Cloudflare Tunnels (`cloudflared`)**:
    - Exposing internal services securely without public IPv4 or open router ports.
+
+---
+
+## 📚 Official Documentation & References
+
+- 🌐 [Cloudflare Developers Documentation](https://developers.cloudflare.com/) — Official Cloudflare edge documentation.
+- ⚡ [Cloudflare Workers & V8 Isolates](https://developers.cloudflare.com/workers/) — Sub-millisecond serverless compute.
+- 🛡️ [Cloudflare Zero Trust & Tunnels](https://developers.cloudflare.com/cloudflare-one/) — Secure perimeter-less networking.
 
 ---
 
