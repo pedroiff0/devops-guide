@@ -2,6 +2,7 @@
 
 > **Welcome AI Agents (Antigravity, Claude Code, Hermes, Cursor, Copilot & contributors)!**
 > This repository is a large-scale, bilingual (PT-BR / EN-US) **Second Brain & Re-explained Documentation Hub** published via Quartz v4 to **[devops.phrandrade.com](https://devops.phrandrade.com)**.
+> Maintained by **Pedro Henrique Rocha de Andrade** ([@pedroiff0](https://github.com/pedroiff0)) and **Everton** ([@evertonpje](https://github.com/evertonpje)).
 
 ---
 
@@ -10,14 +11,20 @@
 ```text
 devops-guide/
 ├── .claude/                     # Claude Code agent configuration & guidelines
-├── .github/workflows/           # GitHub Actions CI/CD & GitHub Pages deploy
+├── .github/                     # GitHub Actions CI/CD, issue & PR templates
+│   ├── workflows/
+│   │   ├── deploy-gh-pages.yaml # Continuous deploy to devops.phrandrade.com
+│   │   ├── ci.yml               # Automated build and commit linting
+│   │   └── commit-verify.yml    # Branch commit validator
+│   ├── ISSUE_TEMPLATE/          # Standardized issue templates
+│   └── PULL_REQUEST_TEMPLATE.md # PR template
 ├── .hermes/                     # Hermes Agent manifest and skills configuration
 ├── content/                     # Core Markdown Knowledge Vault
 │   ├── index.md                 # Root portal / language gateway
 │   ├── pt-br/                   # Portuguese documentation tree
 │   │   ├── index.md             # PT-BR central hub
-│   │   ├── github/              # Full GitHub & Git Guide
-│   │   ├── docker/              # Docker & Containers Hub
+│   │   ├── github/              # Full GitHub & Git Guide (7 in-depth notes)
+│   │   ├── docker/              # Docker & Containers Hub (3 in-depth notes)
 │   │   ├── cloudflare/          # Cloudflare Hub
 │   │   ├── claude/              # Claude & AI Hub
 │   │   ├── hermes/              # Hermes Agent Hub
@@ -36,7 +43,8 @@ devops-guide/
 │   ├── second-brain-graph/      # Bidirectional graph curation
 │   ├── quartz-management/       # Quartz CLI commands & plugins
 │   ├── git-flow-conventional-commits/ # Commit & PR conventions
-│   └── ci-cd-github-pages/      # Pipeline operations
+│   ├── ci-cd-github-pages/      # Pipeline operations
+│   └── re-explained-doc-engine/ # Scaffolding new modules
 ├── scripts/
 │   ├── validate-commit-msg.sh   # Conventional Commits 1.0.0 validator
 │   └── check-i18n-mirror.py     # Multilingual symmetry checker
@@ -78,10 +86,27 @@ tags:
 
 ---
 
-## 🛠️ 3. Execution Runbook
+## 🔄 3. Standard Agile Content Workflow
 
-When an agent is asked to create or modify content:
-1. **Plan**: Identify topics, subtopics, and sub-subtopics with `skills/content-planning/SKILL.md`.
-2. **Author**: Write the technical content using `skills/re-explained-authoring/SKILL.md`.
-3. **Mirror**: Ensure English and Portuguese files match 1:1.
-4. **Audit**: Run `npm run build` and `python3 scripts/check-i18n-mirror.py` via `skills/content-validation/SKILL.md`.
+When introducing new content or modules to the repository, agents and developers must follow this strict cycle:
+
+```mermaid
+graph LR
+    Issue["1. Open Issue (Template)"] --> Branch["2. Create Work Branch"]
+    Branch --> Author["3. Write PT-BR & EN-US"]
+    Author --> Validate["4. Validate (Build + Mirror)"]
+    Validate --> Commit["5. Semantic Commit"]
+    Commit --> PR["6. Open Pull Request"]
+    PR --> Review["7. Technical Code Review"]
+    Review --> Merge["8. Squash & Merge + Delete Branch"]
+    Merge --> Deploy["9. Auto-Deploy to devops.phrandrade.com"]
+```
+
+1. **Register Issue**: Create an issue using `gh issue create` with the documentation template.
+2. **Work Branch**: Create branch `feat/<issue-number>-short-description`.
+3. **Author Content**: Write technical guides adhering to `skills/re-explained-authoring/SKILL.md`.
+4. **Audit Locally**: Execute `npm run build` and `python3 scripts/check-i18n-mirror.py`.
+5. **Commit**: `git commit -m "feat(module): description"`.
+6. **Open PR**: `gh pr create` with filled template and `Closes #<issue-number>`.
+7. **Code Review & Squash Merge**: Review changes and execute `gh pr merge --squash --delete-branch`.
+8. **Verify Continuous Deploy**: Confirm GitHub Actions deploys the updated vault to `devops.phrandrade.com`.
