@@ -7,6 +7,7 @@ on:
   push:
     branches-ignore:
       - main
+  workflow_dispatch:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -16,6 +17,7 @@ jobs:
   commit-lint:
     name: Verify Conventional Commits
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
@@ -36,6 +38,7 @@ jobs:
   build-test:
     name: Test Quartz Build
     runs-on: ubuntu-latest
+    timeout-minutes: 5
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v4
